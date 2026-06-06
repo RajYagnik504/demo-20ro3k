@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+        .hero {
+            height: 500px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?w=1200');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .book-table {
+            background-color: #ffa07a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .about {
+            background-color: #f7f7f7;
+            padding: 50px;
+            text-align: center;
+        }
+        .menu {
+            padding: 50px;
+        }
+        .menu h2 {
+            margin-bottom: 20px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .menu-card {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .menu-card img {
+            height: 180px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .menu-card h3 {
+            margin-top: 10px;
+        }
+        .menu-card p {
+            margin-top: 10px;
+        }
+        .contact {
+            padding: 50px;
+            text-align: center;
+        }
+        .phone {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .call-us {
+            background-color: #ffa07a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .address {
+            margin-top: 20px;
+        }
+        .whatsapp {
+            background-color: #ffa07a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        @media only screen and (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .menu-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h2>Restaurant Name</h2>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="home" class="hero">
+        <h1>Restaurant Name</h1>
+        <p>Authentic Flavors of Surat</p>
+        <a href="https://wa.me/91" target="_blank" class="book-table">Book Table</a>
+    </section>
+    <section id="about" class="about">
+        <p>Our restaurant is dedicated to serving the most delicious and authentic dishes from Surat.</p>
+        <p>We use only the freshest ingredients to ensure that every bite is a delight.</p>
+    </section>
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=400" alt="dish image">
+                <h3>Paneer Butter Masala</h3>
+                <p>₹220</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?w=400" alt="dish image">
+                <h3>Dal Makhani</h3>
+                <p>₹180</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?w=400" alt="dish image">
+                <h3>Veg Biryani</h3>
+                <p>₹250</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?w=400" alt="dish image">
+                <h3>Chole Bhature</h3>
+                <p>₹160</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?w=400" alt="dish image">
+                <h3>Veg Thali</h3>
+                <p>₹299</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg?w=400" alt="dish image">
+                <h3>Gulab Jamun</h3>
+                <p>₹89</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <a href="tel:1234567890" class="phone">1234567890</a>
+        <button class="call-us">Call Us Now</button>
+        <p class="address">123, Main Road, Surat</p>
+        <a href="https://wa.me/91" target="_blank" class="whatsapp">WhatsApp</a>
+    </section>
+    <footer class="footer">
+        <p>Copyright Restaurant Name 2024</p>
+    </footer>
+</body>
+</html>
