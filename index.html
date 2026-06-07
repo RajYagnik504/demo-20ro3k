@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffa07a;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+        }
+        .hero {
+            height: 100vh;
+            background-image: url('https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?w=1600');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            z-index: 1;
+            color: #fff;
+        }
+        .hero-content h1 {
+            font-size: 64px;
+            font-weight: 700;
+        }
+        .hero-content p {
+            font-size: 18px;
+        }
+        .book-table {
+            background-color: #ffa07a;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .about {
+            padding: 5rem 2rem;
+        }
+        .about h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .about p {
+            font-size: 18px;
+        }
+        .menu {
+            padding: 5rem 2rem;
+        }
+        .menu-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .menu-card {
+            margin: 20px;
+            width: calc(33.33% - 20px);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .menu-card img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        .menu-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .menu-card p {
+            font-size: 16px;
+        }
+        .contact {
+            padding: 5rem 2rem;
+        }
+        .contact h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .contact-btns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .call-btn {
+            background-color: #ffa07a;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .whatsapp-btn {
+            background-color: #34c759;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links a {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            .hero {
+                height: 100vh;
+                background-attachment: scroll;
+            }
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            .about {
+                padding: 2rem 1rem;
+            }
+            .menu {
+                padding: 2rem 1rem;
+            }
+            .menu-cards {
+                flex-direction: column;
+            }
+            .menu-card {
+                margin: 10px 0;
+                width: 100%;
+            }
+            .contact {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="logo"> </span>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Menu</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h1></h1>
+            <p>Authentic Flavors of Surat</p>
+            <a href="https://wa.me/91" class="book-table">Book Table</a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h2>About</h2>
+        <p> </p>
+        <p> </p>
+    </section>
+    <section class="menu" id="menu">
+        <h2>Menu</h2>
+        <div class="menu-cards">
+            <div class="menu-card">
+                <img src="https://images.pexels.com/photos/3622608/pexels-photo-3622608.jpeg?w=400" alt="">
+                <h3>Paneer Butter Masala</h3>
+                <p>Rs220</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?w=400" alt="">
+                <h3>Dal Makhani</h3>
+                <p>Rs180</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?w=400" alt="">
+                <h3>Veg Biryani</h3>
+                <p>Rs250</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.pexels.com/photos/2647933/pexels-photo-2647933.jpeg?w=400" alt="">
+                <h3>Chole Bhature</h3>
+                <p>Rs160</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg?w=400" alt="">
+                <h3>Veg Thali</h3>
+                <p>Rs299</p>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.pexels.com/photos/6461831/pexels-photo-6461831.jpeg?w=400" alt="">
+                <h3>Gulab Jamun</h3>
+                <p>Rs89</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-btns">
+            <a href="tel:" class="call-btn">Call</a>
+            <a href="https://wa.me/91" class="whatsapp-btn">WhatsApp</a>
+        </div>
+        <p> </p>
+    </section>
+    <footer class="footer">
+        Copyright  2024.
+    </footer>
+</body>
+</html>
