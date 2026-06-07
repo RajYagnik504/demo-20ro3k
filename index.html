@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant in Surat</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 2rem;
+        }
+        .navbar a:hover {
+            color: #e67e22;
+        }
+        .hero {
+            height: 500px;
+            background-image: url('https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?w=1200');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 2rem;
+        }
+        .book-table {
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .about {
+            padding: 5rem;
+            background-color: #f7f7f7;
+        }
+        .about h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .about p {
+            font-size: 16px;
+            margin-bottom: 2rem;
+        }
+        .menu {
+            padding: 5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .menu-card {
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+        .menu-card img {
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+        }
+        .menu-card:hover {
+            transform: scale(1.05);
+        }
+        .menu-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 1rem;
+        }
+        .menu-card p {
+            font-size: 16px;
+            margin: 1rem;
+        }
+        .gallery {
+            padding: 5rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        .gallery img {
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .contact {
+            padding: 5rem;
+            background-color: #f7f7f7;
+        }
+        .contact h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .contact p {
+            font-size: 16px;
+            margin-bottom: 2rem;
+        }
+        .call-now {
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .whatsapp {
+            background-color: #25d366;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+        .footer p {
+            font-size: 14px;
+            margin-bottom: 1rem;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #fff;
+            margin-right: 2rem;
+        }
+        .footer a:hover {
+            color: #e67e22;
+        }
+        @media only screen and (max-width: 768px) {
+            .menu {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .menu {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#">Logo</a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Authentic Flavors of Surat</h1>
+            <p>Experience the taste of Surat</p>
+            <a href="https://wa.me/9123456789" class="book-table">Book Table</a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+    </section>
+    <section class="menu" id="menu">
+        <div class="menu-card">
+            <img src="https://images.pexels.com/photos/3622608/pexels-photo-3622608.jpeg?w=400" alt="Paneer Butter Masala">
+            <h3>Paneer Butter Masala</h3>
+            <p>Rs. 220</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?w=400" alt="Dal Makhani">
+            <h3>Dal Makhani</h3>
+            <p>Rs. 180</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?w=400" alt="Veg Biryani">
+            <h3>Veg Biryani</h3>
+            <p>Rs. 250</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://images.pexels.com/photos/2647933/pexels-photo-2647933.jpeg?w=400" alt="Chole Bhature">
+            <h3>Chole Bhature</h3>
+            <p>Rs. 160</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg?w=400" alt="Veg Thali">
+            <h3>Veg Thali</h3>
+            <p>Rs. 299</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://images.pexels.com/photos/6461831/pexels-photo-6461831.jpeg?w=400" alt="Gulab Jamun">
+            <h3>Gulab Jamun</h3>
+            <p>Rs. 89</p>
+        </div>
+    </section>
+    <section class="gallery">
+        <img src="https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?w=400" alt="Food Image 1">
+        <img src="https://images.pexels.com/photos/3622608/pexels-photo-3622608.jpeg?w=400" alt="Food Image 2">
+        <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?w=400" alt="Food Image 3">
+        <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?w=400" alt="Food Image 4">
+    </section>
+    <section class="contact" id="contact">
+        <h2>Get in Touch</h2>
+        <p>Phone: 9123456789</p>
+        <p>Address: Surat, India</p>
+        <button class="call-now">Call Now</button>
+        <a href="https://wa.me/9123456789" class="whatsapp">WhatsApp</a>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 Restaurant in Surat</p>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+    </footer>
+</body>
+</html>
