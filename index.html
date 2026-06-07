@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTAURANT NAME</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        .nav img {
+            height: 30px;
+        }
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?w=1600);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 48px;
+        }
+        .hero button {
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            margin: 20px;
+            width: calc(33.33% - 20px);
+        }
+        .card img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .card p {
+            font-size: 16px;
+            color: #666;
+        }
+        .contact {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        .contact button {
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .contact button.green {
+            background-color: #34c759;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        @media only screen and (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <img src="" alt="">
+        <span>PHONE</span>
+        <span>ADDRESS</span>
+    </nav>
+    <section class="hero">
+        <h1></h1>
+        <button onclick="window.open('https://wa.me/91', '_blank')">Book Table</button>
+    </section>
+    <section class="menu">
+        <div class="card">
+            <img src="https://images.pexels.com/photos/3622608/pexels-photo-3622608.jpeg?w=400" alt="Paneer Butter Masala">
+            <h3>Paneer Butter Masala</h3>
+            <p>Rs 220</p>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?w=400" alt="Dal Makhani">
+            <h3>Dal Makhani</h3>
+            <p>Rs 180</p>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?w=400" alt="Veg Biryani">
+            <h3>Veg Biryani</h3>
+            <p>Rs 250</p>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/2647933/pexels-photo-2647933.jpeg?w=400" alt="Chole Bhature">
+            <h3>Chole Bhature</h3>
+            <p>Rs 160</p>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg?w=400" alt="Veg Thali">
+            <h3>Veg Thali</h3>
+            <p>Rs 299</p>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/6461831/pexels-photo-6461831.jpeg?w=400" alt="Gulab Jamun">
+            <h3>Gulab Jamun</h3>
+            <p>Rs 89</p>
+        </div>
+    </section>
+    <section class="contact">
+        <button> </button>
+        <button class="green"> </button>
+        <p></p>
+    </section>
+    <footer class="footer">
+        Copyright  2024
+    </footer>
+</body>
+</html>
