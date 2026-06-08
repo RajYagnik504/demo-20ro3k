@@ -3,84 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radhe Dhokla</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Radhe Dhokla | Best Restaurant in Surat</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;}
-nav{position:fixed;top:0;width:100%;background:#fff;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 20px rgba(0,0,0,0.1);z-index:1000;}
-.logo{font-size:22px;font-weight:700;color:#ff6b00;}
-.nav-links a{margin-left:25px;text-decoration:none;color:#333;font-weight:500;}
-.hero{height:100vh;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&w=1600') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;}
-.hero h1{font-size:64px;font-weight:700;margin-bottom:15px;}
-.hero p{font-size:22px;margin-bottom:30px;opacity:0.9;}
-.btn-orange{background:#ff6b00;color:#fff;padding:14px 35px;border:none;border-radius:50px;font-size:16px;font-weight:600;cursor:pointer;text-decoration:none;}
-.about{padding:80px 40px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto;}
-.about h2{font-size:40px;color:#ff6b00;margin-bottom:20px;}
-.about p{font-size:16px;color:#555;line-height:1.8;}
-.about img{width:100%;height:400px;object-fit:cover;border-radius:15px;}
-.menu{background:#f8f8f8;padding:80px 40px;}
-.menu h2{text-align:center;font-size:40px;margin-bottom:50px;color:#222;}
-.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1200px;margin:0 auto;}
-.card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,0.08);}
-.card img{width:100%;height:220px;object-fit:cover;}
-.card-body{padding:20px;}
-.card-body h3{font-size:18px;font-weight:600;}
-.card-body .price{color:#ff6b00;font-weight:700;font-size:18px;margin-top:8px;}
-.contact{background:#ff6b00;padding:80px 40px;text-align:center;color:#fff;}
-.contact h2{font-size:40px;margin-bottom:30px;}
-.contact p{font-size:18px;margin-bottom:30px;}
-.btn-white{background:#fff;color:#ff6b00;padding:14px 35px;border-radius:50px;font-size:16px;font-weight:600;text-decoration:none;margin:10px;}
-.btn-green{background:#25D366;color:#fff;padding:14px 35px;border-radius:50px;font-size:16px;font-weight:600;text-decoration:none;margin:10px;}
-footer{background:#111;color:#fff;text-align:center;padding:25px;font-size:14px;}
-@media(max-width:768px){.hero h1{font-size:36px;}.menu-grid{grid-template-columns:1fr;}.about{grid-template-columns:1fr;}}
+body{font-family:'Poppins',sans-serif;color:#222;}
+nav{position:fixed;top:0;width:100%;background:#fff;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 30px rgba(0,0,0,0.08);z-index:1000;}
+.logo{font-size:26px;font-weight:800;color:#c8102e;letter-spacing:-1px;}
+.logo span{color:#222;}
+.nav-links a{margin-left:35px;text-decoration:none;color:#444;font-weight:500;font-size:15px;transition:color .3s;}
+.nav-links a:hover{color:#c8102e;}
+.nav-links .btn-nav{background:#c8102e;color:#fff;padding:10px 25px;border-radius:50px;margin-left:35px;}
+.hero{min-height:100vh;background:#fafafa;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:120px 60px 60px;}
+.hero-left h1{font-size:64px;font-weight:800;line-height:1.1;margin-bottom:20px;}
+.hero-left h1 span{color:#c8102e;}
+.hero-left p{font-size:18px;color:#666;margin-bottom:40px;line-height:1.7;max-width:480px;}
+.hero-btns{display:flex;gap:20px;align-items:center;}
+.btn-red{background:#c8102e;color:#fff;padding:16px 40px;border-radius:50px;font-size:16px;font-weight:600;text-decoration:none;transition:transform .3s;}
+.btn-red:hover{transform:translateY(-3px);}
+.btn-outline{color:#222;font-size:16px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:8px;}
+.btn-outline::after{content:'→';}
+.hero-right{position:relative;height:500px;}
+.hero-img-main{width:100%;height:100%;object-fit:cover;border-radius:30px;}
+.hero-badge{position:absolute;bottom:30px;left:-30px;background:#fff;padding:15px 25px;border-radius:15px;box-shadow:0 10px 40px rgba(0,0,0,0.15);}
+.hero-badge .num{font-size:32px;font-weight:800;color:#c8102e;}
+.hero-badge .text{font-size:13px;color:#666;}
+.strip{background:#c8102e;color:#fff;padding:20px 60px;display:flex;justify-content:space-around;text-align:center;}
+.strip-item .n{font-size:32px;font-weight:700;}
+.strip-item .l{font-size:13px;opacity:0.8;}
+.about{padding:100px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1300px;margin:0 auto;}
+.about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:15px;}
+.about-imgs img{width:100%;height:220px;object-fit:cover;border-radius:15px;}
+.about-imgs img:first-child{height:280px;grid-column:span 2;}
+.about-right h2{font-size:42px;font-weight:800;margin-bottom:20px;}
+.about-right h2 span{color:#c8102e;}
+.about-right p{color:#666;line-height:1.8;margin-bottom:30px;}
+.tag{display:inline-block;background:#fff0f0;color:#c8102e;padding:8px 20px;border-radius:50px;font-size:13px;font-weight:600;margin:5px;}
+.menu-section{background:#f5f5f5;padding:100px 60px;}
+.section-head{text-align:center;margin-bottom:60px;}
+.section-head h2{font-size:44px;font-weight:800;}
+.section-head h2 span{color:#c8102e;}
+.section-head p{color:#888;font-size:16px;margin-top:10px;}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;max-width:1200px;margin:0 auto;}
+.menu-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 5px 25px rgba(0,0,0,0.07);transition:transform .3s;}
+.menu-card:hover{transform:translateY(-8px);}
+.menu-card img{width:100%;height:220px;object-fit:cover;}
+.menu-card-body{padding:22px;}
+.menu-card-body h3{font-size:18px;font-weight:700;margin-bottom:8px;}
+.menu-card-body p{color:#888;font-size:14px;margin-bottom:15px;}
+.menu-card-footer{display:flex;justify-content:space-between;align-items:center;}
+.price{font-size:22px;font-weight:800;color:#c8102e;}
+.order-btn{background:#fff0f0;color:#c8102e;border:none;padding:8px 20px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;}
+.contact-section{padding:100px 60px;background:#fff;}
+.contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.contact-left h2{font-size:44px;font-weight:800;margin-bottom:20px;}
+.contact-left h2 span{color:#c8102e;}
+.contact-left p{color:#666;margin-bottom:40px;line-height:1.8;}
+.contact-btns{display:flex;flex-direction:column;gap:15px;}
+.btn-call{background:#c8102e;color:#fff;padding:18px 40px;border-radius:15px;font-size:18px;font-weight:600;text-decoration:none;text-align:center;}
+.btn-wa{background:#25D366;color:#fff;padding:18px 40px;border-radius:15px;font-size:18px;font-weight:600;text-decoration:none;text-align:center;}
+.contact-right{background:#f5f5f5;border-radius:25px;padding:40px;}
+.info-item{display:flex;gap:20px;align-items:flex-start;margin-bottom:30px;}
+.info-icon{width:50px;height:50px;background:#fff0f0;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.info-text h4{font-weight:700;margin-bottom:5px;}
+.info-text p{color:#888;font-size:14px;line-height:1.6;}
+footer{background:#111;color:#fff;padding:40px 60px;display:flex;justify-content:space-between;align-items:center;}
+.footer-logo{font-size:24px;font-weight:800;color:#c8102e;}
+.footer-text{color:#888;font-size:14px;}
+@media(max-width:900px){
+.hero{grid-template-columns:1fr;padding:100px 25px 50px;}
+.hero-right{height:300px;margin-top:30px;}
+.hero-left h1{font-size:40px;}
+.about{grid-template-columns:1fr;padding:60px 25px;}
+.menu-grid{grid-template-columns:1fr;padding:0 25px;}
+.menu-section{padding:60px 25px;}
+.contact-inner{grid-template-columns:1fr;padding:0;}
+.contact-section{padding:60px 25px;}
+.strip{padding:20px 25px;flex-wrap:wrap;gap:20px;}
+nav{padding:15px 25px;}
+.nav-links{display:none;}
+footer{flex-direction:column;gap:15px;text-align:center;padding:30px 25px;}
+}
 </style>
 </head>
 <body>
 <nav>
-<div class="logo">Radhe Dhokla</div>
-<div class="nav-links">
-<a href="#hero">Home</a>
-<a href="#about">About</a>
-<a href="#menu">Menu</a>
-<a href="#contact">Contact</a>
-</div>
+  <div class="logo">Radhe<span> Dhokla</span></div>
+  <div class="nav-links">
+    <a href="#hero">Home</a>
+    <a href="#menu">Menus</a>
+    <a href="#contact">Contact</a>
+    <a href="https://wa.me/91" class="btn-nav">Book Table</a>
+  </div>
 </nav>
+
 <section class="hero" id="hero">
-<div>
-<h1>Radhe Dhokla</h1>
-<p>Authentic Flavors of Surat</p>
-<a href="https://wa.me/91#ERROR! (Formula parse error.)" class="btn-orange">Book a Table</a>
-</div>
+  <div class="hero-left">
+    <h1>Your Taste<br>Cooked to<br><span>Perfection.</span></h1>
+    <p>Welcome to Radhe Dhokla — Surat's favourite dining destination. Serving authentic flavours with love since day one. Located at Singapuri wadi,Rustampura main road Behind 21st century Building, Ring Rd, Surat, Gujarat 395002, India.</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-red">View Menu →</a>
+      <a href="#contact" class="btn-outline">How We Work</a>
+    </div>
+    <div style="margin-top:40px;display:flex;gap:40px;">
+      <div><div style="font-size:28px;font-weight:800;color:#c8102e;">500+</div><div style="font-size:13px;color:#888;">Happy Customers</div></div>
+      <div><div style="font-size:28px;font-weight:800;color:#c8102e;">50+</div><div style="font-size:13px;color:#888;">Menu Items</div></div>
+      <div><div style="font-size:28px;font-weight:800;color:#c8102e;">4.8★</div><div style="font-size:13px;color:#888;">Rating</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img class="hero-img-main" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&w=900" alt="Radhe Dhokla">
+    <div class="hero-badge">
+      <div class="num">10+</div>
+      <div class="text">Years of Experience</div>
+    </div>
+  </div>
 </section>
+
+<div class="strip">
+  <div class="strip-item"><div class="n">100%</div><div class="l">Fresh Ingredients</div></div>
+  <div class="strip-item"><div class="n">Fast</div><div class="l">Table Service</div></div>
+  <div class="strip-item"><div class="n">Hygienic</div><div class="l">Kitchen</div></div>
+  <div class="strip-item"><div class="n">Daily</div><div class="l">Fresh Menu</div></div>
+</div>
+
 <section id="about">
 <div class="about">
-<div>
-<h2>About Radhe Dhokla</h2>
-<p>Welcome to Radhe Dhokla, your favourite dining destination in Surat. We are located at Singapuri wadi,Rustampura main road Behind 21st century Building, Ring Rd, Surat, Gujarat 395002, India. Our chefs prepare every dish with love using the freshest ingredients. Come visit us and experience the true taste of Gujarat!</p>
-<br>
-<a href="tel:#ERROR! (Formula parse error.)" class="btn-orange">Call Us Now</a>
-</div>
-<img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&w=800" alt="Restaurant">
+  <div class="about-imgs">
+    <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&w=600" alt="Restaurant">
+    <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&w=400" alt="Food">
+    <img src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&w=400" alt="Dining">
+  </div>
+  <div class="about-right">
+    <h2>About <span>Radhe Dhokla</span></h2>
+    <p>We are proud to serve the people of Surat with the finest dining experience. Every dish is prepared fresh daily by our expert chefs using hand-picked ingredients. Whether you are celebrating a special occasion or just want a great meal — Radhe Dhokla is your place.</p>
+    <p>Visit us at: <strong>Singapuri wadi,Rustampura main road Behind 21st century Building, Ring Rd, Surat, Gujarat 395002, India</strong></p>
+    <div style="margin-top:20px;">
+      <span class="tag">🍽️ Dine In</span>
+      <span class="tag">📦 Takeaway</span>
+      <span class="tag">🏠 Home Delivery</span>
+      <span class="tag">🎉 Events</span>
+    </div>
+  </div>
 </div>
 </section>
-<section class="menu" id="menu">
-<h2>Our Menu</h2>
+
+<section class="menu-section" id="menu">
+<div class="section-head">
+  <h2>Our <span>Menu</span></h2>
+  <p>Fresh, delicious and made with love every single day</p>
+</div>
 <div class="menu-grid">
-<div class="card"><img src="https://images.pexels.com/photos/3622608/pexels-photo-3622608.jpeg?auto=compress&w=400" alt="Paneer Butter Masala"><div class="card-body"><h3>Paneer Butter Masala</h3><p class="price">₹220</p></div></div>
-<div class="card"><img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&w=400" alt="Dal Makhani"><div class="card-body"><h3>Dal Makhani</h3><p class="price">₹180</p></div></div>
-<div class="card"><img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&w=400" alt="Veg Biryani"><div class="card-body"><h3>Veg Biryani</h3><p class="price">₹250</p></div></div>
-<div class="card"><img src="https://images.pexels.com/photos/2647933/pexels-photo-2647933.jpeg?auto=compress&w=400" alt="Chole Bhature"><div class="card-body"><h3>Chole Bhature</h3><p class="price">₹160</p></div></div>
-<div class="card"><img src="https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg?auto=compress&w=400" alt="Veg Thali"><div class="card-body"><h3>Veg Thali</h3><p class="price">₹299</p></div></div>
-<div class="card"><img src="https://images.pexels.com/photos/6461831/pexels-photo-6461831.jpeg?auto=compress&w=400" alt="Gulab Jamun"><div class="card-body"><h3>Gulab Jamun</h3><p class="price">₹89</p></div></div>
+  <div class="menu-card">
+    <img src="https://images.pexels.com/photos/3622608/pexels-photo-3622608.jpeg?auto=compress&w=500" alt="Paneer Butter Masala">
+    <div class="menu-card-body">
+      <h3>Paneer Butter Masala</h3>
+      <p>Rich creamy tomato gravy with soft paneer cubes</p>
+      <div class="menu-card-footer"><span class="price">₹220</span><button class="order-btn">Order Now</button></div>
+    </div>
+  </div>
+  <div class="menu-card">
+    <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&w=500" alt="Dal Makhani">
+    <div class="menu-card-body">
+      <h3>Dal Makhani</h3>
+      <p>Slow cooked black lentils in butter and cream</p>
+      <div class="menu-card-footer"><span class="price">₹180</span><button class="order-btn">Order Now</button></div>
+    </div>
+  </div>
+  <div class="menu-card">
+    <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&w=500" alt="Veg Biryani">
+    <div class="menu-card-body">
+      <h3>Veg Biryani</h3>
+      <p>Fragrant basmati rice with fresh vegetables and spices</p>
+      <div class="menu-card-footer"><span class="price">₹250</span><button class="order-btn">Order Now</button></div>
+    </div>
+  </div>
+  <div class="menu-card">
+    <img src="https://images.pexels.com/photos/2647933/pexels-photo-2647933.jpeg?auto=compress&w=500" alt="Chole Bhature">
+    <div class="menu-card-body">
+      <h3>Chole Bhature</h3>
+      <p>Fluffy fried bread with spicy chickpea curry</p>
+      <div class="menu-card-footer"><span class="price">₹160</span><button class="order-btn">Order Now</button></div>
+    </div>
+  </div>
+  <div class="menu-card">
+    <img src="https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg?auto=compress&w=500" alt="Veg Thali">
+    <div class="menu-card-body">
+      <h3>Veg Thali</h3>
+      <p>Complete meal with dal, sabzi, roti, rice and dessert</p>
+      <div class="menu-card-footer"><span class="price">₹299</span><button class="order-btn">Order Now</button></div>
+    </div>
+  </div>
+  <div class="menu-card">
+    <img src="https://images.pexels.com/photos/6461831/pexels-photo-6461831.jpeg?auto=compress&w=500" alt="Gulab Jamun">
+    <div class="menu-card-body">
+      <h3>Gulab Jamun</h3>
+      <p>Soft milk dumplings soaked in rose flavoured syrup</p>
+      <div class="menu-card-footer"><span class="price">₹89</span><button class="order-btn">Order Now</button></div>
+    </div>
+  </div>
 </div>
 </section>
-<section class="contact" id="contact">
-<h2>Visit Us Today</h2>
-<p>Singapuri wadi,Rustampura main road Behind 21st century Building, Ring Rd, Surat, Gujarat 395002, India</p>
-<a href="tel:#ERROR! (Formula parse error.)" class="btn-white">📞 Call Us</a>
-<a href="https://wa.me/91#ERROR! (Formula parse error.)" class="btn-green">💬 WhatsApp</a>
+
+<section class="contact-section" id="contact">
+<div class="contact-inner">
+  <div class="contact-left">
+    <h2>Visit <span>Radhe Dhokla</span> Today</h2>
+    <p>We would love to serve you! Come visit us or give us a call. We are open 7 days a week for lunch and dinner.</p>
+    <div class="contact-btns">
+      <a href="tel:" class="btn-call">📞 Call: #ERROR! (Formula parse error.)</a>
+      <a href="https://wa.me/91" class="btn-wa">💬 WhatsApp Us</a>
+    </div>
+  </div>
+  <div class="contact-right">
+    <div class="info-item">
+      <div class="info-icon">📍</div>
+      <div class="info-text"><h4>Our Location</h4><p>Singapuri wadi,Rustampura main road Behind 21st century Building, Ring Rd, Surat, Gujarat 395002, India</p></div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">📞</div>
+      <div class="info-text"><h4>Phone Number</h4><p>#ERROR! (Formula parse error.)</p></div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">🕐</div>
+      <div class="info-text"><h4>Opening Hours</h4><p>Mon - Sun: 11:00 AM - 11:00 PM</p></div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">✉️</div>
+      <div class="info-text"><h4>WhatsApp</h4><p>wa.me/91</p></div>
+    </div>
+  </div>
+</div>
 </section>
-<footer>© 2024 Radhe Dhokla. All rights reserved.</footer>
+
+<footer>
+  <div class="footer-logo">Radhe Dhokla</div>
+  <div class="footer-text">© 2024 Radhe Dhokla. All rights reserved. | Surat, Gujarat</div>
+</footer>
 </body>
 </html>
