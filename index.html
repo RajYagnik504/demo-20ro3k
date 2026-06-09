@@ -4,192 +4,393 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Restaurant | Best Restaurant in Surat</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+:root{
+--primary:#DC2626;
+--secondary:#F87171;
+--accent:#A16207;
+--bg:#FEF2F2;
+--fg:#450A0A;
+--muted:#F0EDF1;
+--border:#FECACA;
+--white:#FFFFFF;
+}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;color:#222;}
-nav{position:fixed;top:0;width:100%;background:#fff;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 30px rgba(0,0,0,0.08);z-index:1000;}
-.logo{font-size:26px;font-weight:800;color:#c8102e;}
-.logo span{color:#222;}
-.nav-links a{margin-left:35px;text-decoration:none;color:#444;font-weight:500;font-size:15px;}
-.nav-links .btn-nav{background:#c8102e;color:#fff;padding:10px 25px;border-radius:50px;margin-left:35px;}
-.hero{min-height:100vh;background:#fafafa;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:120px 60px 60px;}
-.hero-left h1{font-size:64px;font-weight:800;line-height:1.1;margin-bottom:20px;}
-.hero-left h1 span{color:#c8102e;}
-.hero-left p{font-size:18px;color:#666;margin-bottom:40px;line-height:1.7;max-width:480px;}
-.hero-btns{display:flex;gap:20px;align-items:center;}
-.btn-red{background:#c8102e;color:#fff;padding:16px 40px;border-radius:50px;font-size:16px;font-weight:600;text-decoration:none;}
-.btn-outline{color:#222;font-size:16px;font-weight:600;text-decoration:none;}
-.hero-right{position:relative;height:500px;}
-.hero-img-main{width:100%;height:100%;object-fit:cover;border-radius:30px;}
-.hero-badge{position:absolute;bottom:30px;left:-30px;background:#fff;padding:15px 25px;border-radius:15px;box-shadow:0 10px 40px rgba(0,0,0,0.15);}
-.hero-badge .num{font-size:32px;font-weight:800;color:#c8102e;}
-.hero-badge .text{font-size:13px;color:#666;}
-.strip{background:#c8102e;color:#fff;padding:20px 60px;display:flex;justify-content:space-around;text-align:center;}
-.strip-item .n{font-size:32px;font-weight:700;}
-.strip-item .l{font-size:13px;opacity:0.8;}
+html{scroll-behavior:smooth;}
+body{font-family:'Karla',sans-serif;background:var(--white);color:var(--fg);}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);padding:16px 60px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 20px rgba(220,38,38,0.1);z-index:1000;}
+.logo{font-family:'Playfair Display SC',serif;font-size:24px;font-weight:700;color:var(--primary);letter-spacing:1px;}
+.nav-links{display:flex;align-items:center;gap:35px;}
+.nav-links a{text-decoration:none;color:var(--fg);font-weight:500;font-size:15px;transition:color .2s;cursor:pointer;}
+.nav-links a:hover{color:var(--primary);}
+.btn-book{background:var(--primary);color:var(--white);padding:12px 28px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;transition:all .2s;cursor:pointer;}
+.btn-book:hover{background:#B91C1C;transform:translateY(-2px);box-shadow:0 8px 25px rgba(220,38,38,0.3);}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:100px 60px 60px;background:var(--white);gap:60px;}
+.hero-tag{display:inline-block;background:var(--bg);color:var(--primary);padding:8px 20px;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:20px;border:1px solid var(--border);}
+.hero h1{font-family:'Playfair Display SC',serif;font-size:58px;font-weight:700;line-height:1.1;color:var(--fg);margin-bottom:16px;}
+.hero h1 em{font-style:normal;color:var(--primary);}
+.hero-sub{font-size:17px;color:#666;line-height:1.7;max-width:460px;margin-bottom:36px;}
+.hero-btns{display:flex;gap:16px;align-items:center;margin-bottom:48px;}
+.btn-primary{background:var(--primary);color:var(--white);padding:16px 36px;border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;transition:all .25s;cursor:pointer;display:inline-flex;align-items:center;gap:8px;}
+.btn-primary:hover{background:#B91C1C;transform:translateY(-3px);box-shadow:0 12px 30px rgba(220,38,38,0.35);}
+.btn-ghost{color:var(--fg);font-size:16px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color .2s;}
+.btn-ghost:hover{color:var(--primary);}
+.hero-stats{display:flex;gap:40px;}
+.stat-num{font-family:'Playfair Display SC',serif;font-size:30px;font-weight:700;color:var(--primary);}
+.stat-label{font-size:12px;color:#888;margin-top:2px;}
+.hero-right{position:relative;}
+.hero-img-wrap{position:relative;border-radius:24px;overflow:hidden;height:540px;}
+.hero-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+.hero-img-wrap:hover img{transform:scale(1.04);}
+.float-card{position:absolute;background:var(--white);border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,0.12);padding:16px 20px;}
+.float-card-1{bottom:30px;left:-25px;}
+.float-card-2{top:30px;right:-20px;}
+.float-card .fc-num{font-family:'Playfair Display SC',serif;font-size:26px;font-weight:700;color:var(--primary);}
+.float-card .fc-text{font-size:12px;color:#888;}
+.float-card .fc-badge{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#16A34A;}
+
+/* STRIP */
+.strip{background:var(--primary);color:var(--white);padding:28px 60px;display:grid;grid-template-columns:repeat(4,1fr);text-align:center;gap:20px;}
+.strip-item{padding:8px;}
+.strip-n{font-family:'Playfair Display SC',serif;font-size:28px;font-weight:700;margin-bottom:4px;}
+.strip-l{font-size:13px;opacity:0.85;}
+
+/* ABOUT */
 .about{padding:100px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1300px;margin:0 auto;}
-.about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:15px;}
-.about-imgs img{width:100%;height:220px;object-fit:cover;border-radius:15px;}
-.about-imgs img:first-child{height:280px;grid-column:span 2;}
-.about-right h2{font-size:42px;font-weight:800;margin-bottom:20px;}
-.about-right h2 span{color:#c8102e;}
-.about-right p{color:#666;line-height:1.8;margin-bottom:30px;}
-.tag{display:inline-block;background:#fff0f0;color:#c8102e;padding:8px 20px;border-radius:50px;font-size:13px;font-weight:600;margin:5px;}
-.menu-section{background:#f5f5f5;padding:100px 60px;}
-.section-head{text-align:center;margin-bottom:60px;}
-.section-head h2{font-size:44px;font-weight:800;}
-.section-head h2 span{color:#c8102e;}
-.section-head p{color:#888;font-size:16px;margin-top:10px;}
-.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;max-width:1200px;margin:0 auto;}
-.menu-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 5px 25px rgba(0,0,0,0.07);transition:transform .3s;}
-.menu-card:hover{transform:translateY(-8px);}
-.menu-card img{width:100%;height:220px;object-fit:cover;}
-.menu-card-body{padding:22px;}
-.menu-card-body h3{font-size:18px;font-weight:700;margin-bottom:8px;}
-.menu-card-body p{color:#888;font-size:14px;margin-bottom:15px;}
-.menu-card-footer{display:flex;justify-content:space-between;align-items:center;}
-.price{font-size:22px;font-weight:800;color:#c8102e;}
-.order-btn{background:#fff0f0;color:#c8102e;border:none;padding:8px 20px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;}
-.contact-section{padding:100px 60px;background:#fff;}
+.about-gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.about-gallery img{width:100%;object-fit:cover;border-radius:16px;transition:transform .3s;}
+.about-gallery img:hover{transform:scale(1.02);}
+.about-gallery img:first-child{grid-column:span 2;height:260px;}
+.about-gallery img:not(:first-child){height:180px;}
+.about-tag{display:inline-block;background:var(--bg);color:var(--accent);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:600;margin-bottom:16px;border:1px solid var(--border);}
+.about h2{font-family:'Playfair Display SC',serif;font-size:40px;font-weight:700;color:var(--fg);margin-bottom:20px;line-height:1.2;}
+.about h2 em{font-style:normal;color:var(--primary);}
+.about p{color:#666;line-height:1.8;margin-bottom:20px;font-size:16px;}
+.about-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+.chip{background:var(--bg);border:1px solid var(--border);color:var(--fg);padding:8px 18px;border-radius:50px;font-size:13px;font-weight:500;}
+
+/* MENU */
+.menu{background:var(--bg);padding:100px 60px;}
+.section-header{text-align:center;margin-bottom:64px;}
+.section-header .tag{display:inline-block;background:var(--white);color:var(--primary);padding:6px 18px;border-radius:50px;font-size:12px;font-weight:600;margin-bottom:14px;border:1px solid var(--border);}
+.section-header h2{font-family:'Playfair Display SC',serif;font-size:42px;font-weight:700;color:var(--fg);margin-bottom:10px;}
+.section-header h2 em{font-style:normal;color:var(--primary);}
+.section-header p{color:#888;font-size:16px;}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1200px;margin:0 auto;}
+.menu-card{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(220,38,38,0.06);transition:all .3s;border:1px solid var(--border);}
+.menu-card:hover{transform:translateY(-10px);box-shadow:0 20px 50px rgba(220,38,38,0.15);}
+.menu-card-img{position:relative;overflow:hidden;height:220px;}
+.menu-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.menu-card:hover .menu-card-img img{transform:scale(1.08);}
+.menu-badge{position:absolute;top:14px;left:14px;background:var(--primary);color:var(--white);padding:4px 12px;border-radius:50px;font-size:11px;font-weight:700;}
+.menu-body{padding:22px;}
+.menu-body h3{font-family:'Playfair Display SC',serif;font-size:18px;font-weight:700;margin-bottom:8px;color:var(--fg);}
+.menu-body p{color:#888;font-size:14px;line-height:1.6;margin-bottom:16px;}
+.menu-footer{display:flex;justify-content:space-between;align-items:center;}
+.menu-price{font-family:'Playfair Display SC',serif;font-size:22px;font-weight:700;color:var(--primary);}
+.order-btn{background:var(--bg);color:var(--primary);border:1.5px solid var(--border);padding:8px 20px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;}
+.order-btn:hover{background:var(--primary);color:var(--white);border-color:var(--primary);}
+
+/* TESTIMONIALS */
+.testimonials{padding:100px 60px;background:var(--white);}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1200px;margin:0 auto;}
+.testi-card{background:var(--bg);border-radius:20px;padding:32px;border:1px solid var(--border);transition:transform .3s;}
+.testi-card:hover{transform:translateY(-6px);}
+.testi-stars{color:#F59E0B;font-size:18px;margin-bottom:16px;letter-spacing:2px;}
+.testi-text{font-size:15px;color:#555;line-height:1.7;font-style:italic;margin-bottom:20px;}
+.testi-author{display:flex;align-items:center;gap:12px;}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;color:var(--white);font-family:'Playfair Display SC',serif;font-weight:700;font-size:16px;}
+.testi-name{font-weight:700;font-size:14px;color:var(--fg);}
+.testi-loc{font-size:12px;color:#888;}
+
+/* CONTACT */
+.contact{padding:100px 60px;background:var(--fg);color:var(--white);}
 .contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.contact-left h2{font-size:44px;font-weight:800;margin-bottom:20px;}
-.contact-left h2 span{color:#c8102e;}
-.contact-left p{color:#666;margin-bottom:40px;line-height:1.8;}
-.contact-btns{display:flex;flex-direction:column;gap:15px;}
-.btn-call{background:#c8102e;color:#fff;padding:18px 40px;border-radius:15px;font-size:18px;font-weight:600;text-decoration:none;text-align:center;}
-.btn-wa{background:#25D366;color:#fff;padding:18px 40px;border-radius:15px;font-size:18px;font-weight:600;text-decoration:none;text-align:center;}
-.contact-right{background:#f5f5f5;border-radius:25px;padding:40px;}
-.info-item{display:flex;gap:20px;align-items:flex-start;margin-bottom:30px;}
-.info-icon{width:50px;height:50px;background:#fff0f0;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
-.info-text h4{font-weight:700;margin-bottom:5px;}
-.info-text p{color:#888;font-size:14px;line-height:1.6;}
-footer{background:#111;color:#fff;padding:40px 60px;display:flex;justify-content:space-between;align-items:center;}
-.footer-logo{font-size:24px;font-weight:800;color:#c8102e;}
-.footer-text{color:#888;font-size:14px;}
-@media(max-width:900px){.hero{grid-template-columns:1fr;padding:100px 25px 50px;}.hero-right{height:300px;margin-top:30px;}.hero-left h1{font-size:40px;}.about{grid-template-columns:1fr;padding:60px 25px;}.menu-grid{grid-template-columns:1fr;}.menu-section{padding:60px 25px;}.contact-inner{grid-template-columns:1fr;}.contact-section{padding:60px 25px;}.strip{padding:20px 25px;flex-wrap:wrap;gap:20px;}nav{padding:15px 25px;}.nav-links{display:none;}footer{flex-direction:column;gap:15px;text-align:center;padding:30px 25px;}}
+.contact h2{font-family:'Playfair Display SC',serif;font-size:44px;font-weight:700;margin-bottom:16px;line-height:1.2;}
+.contact h2 em{font-style:normal;color:var(--secondary);}
+.contact-sub{color:rgba(255,255,255,0.65);font-size:16px;line-height:1.7;margin-bottom:40px;}
+.contact-btns{display:flex;flex-direction:column;gap:16px;}
+.btn-call{background:var(--primary);color:var(--white);padding:18px 36px;border-radius:12px;font-size:17px;font-weight:700;text-decoration:none;text-align:center;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:10px;}
+.btn-call:hover{background:#B91C1C;transform:translateY(-3px);box-shadow:0 12px 30px rgba(220,38,38,0.4);}
+.btn-wa{background:#16A34A;color:var(--white);padding:18px 36px;border-radius:12px;font-size:17px;font-weight:700;text-decoration:none;text-align:center;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:10px;}
+.btn-wa:hover{background:#15803D;transform:translateY(-3px);box-shadow:0 12px 30px rgba(22,163,74,0.4);}
+.info-cards{display:flex;flex-direction:column;gap:20px;}
+.info-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:24px;display:flex;gap:18px;align-items:flex-start;transition:background .2s;}
+.info-card:hover{background:rgba(255,255,255,0.12);}
+.info-icon{width:48px;height:48px;background:var(--primary);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+.info-title{font-weight:700;font-size:15px;margin-bottom:4px;color:var(--white);}
+.info-val{font-size:14px;color:rgba(255,255,255,0.65);line-height:1.5;}
+
+/* FOOTER */
+footer{background:#1a0505;color:rgba(255,255,255,0.5);padding:32px 60px;display:flex;justify-content:space-between;align-items:center;}
+.footer-logo{font-family:'Playfair Display SC',serif;font-size:22px;font-weight:700;color:var(--secondary);}
+.footer-text{font-size:13px;}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+nav{padding:14px 24px;}
+.nav-links{display:none;}
+.hero{grid-template-columns:1fr;padding:90px 24px 50px;gap:40px;}
+.hero h1{font-size:38px;}
+.hero-img-wrap{height:320px;}
+.float-card-1,.float-card-2{display:none;}
+.strip{grid-template-columns:repeat(2,1fr);padding:24px;}
+.about{grid-template-columns:1fr;padding:60px 24px;gap:40px;}
+.menu{padding:60px 24px;}
+.menu-grid{grid-template-columns:1fr;}
+.testimonials{padding:60px 24px;}
+.testi-grid{grid-template-columns:1fr;}
+.contact{padding:60px 24px;}
+.contact-inner{grid-template-columns:1fr;gap:40px;}
+footer{flex-direction:column;gap:12px;text-align:center;padding:28px 24px;}
+}
 </style>
 </head>
 <body>
+
+<!-- NAV -->
 <nav>
-  <div class="logo">Restaurant<span> </span></div>
+  <div class="logo">Restaurant</div>
   <div class="nav-links">
     <a href="#hero">Home</a>
-    <a href="#menu">Menus</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
     <a href="#contact">Contact</a>
-    <a href="https://wa.me/919999999999" class="btn-nav">Book Table</a>
+    <a href="https://wa.me/919999999999" class="btn-book">Reserve Table</a>
   </div>
 </nav>
+
+<!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-left">
-    <h1>Your Taste<br>Cooked to<br><span>Perfection.</span></h1>
-    <p>Welcome to Restaurant — Surat's favourite dining destination. Serving authentic flavours with love since day one. Located at Surat, Gujarat.</p>
+    <div class="hero-tag">★ Best Restaurant in Surat</div>
+    <h1>Taste the <em>Authentic</em> Flavours of Gujarat</h1>
+    <p class="hero-sub">Welcome to Restaurant — where every dish tells a story. Located at Surat, Gujarat. Fresh ingredients, expert chefs, unforgettable experience.</p>
     <div class="hero-btns">
-      <a href="#menu" class="btn-red">View Menu →</a>
-      <a href="#contact" class="btn-outline">How We Work →</a>
+      <a href="#menu" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        View Our Menu
+      </a>
+      <a href="#contact" class="btn-ghost">
+        Reserve Table
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
-    <div style="margin-top:40px;display:flex;gap:40px;">
-      <div><div style="font-size:28px;font-weight:800;color:#c8102e;">500+</div><div style="font-size:13px;color:#888;">Happy Customers</div></div>
-      <div><div style="font-size:28px;font-weight:800;color:#c8102e;">50+</div><div style="font-size:13px;color:#888;">Menu Items</div></div>
-      <div><div style="font-size:28px;font-weight:800;color:#c8102e;">4.8★</div><div style="font-size:13px;color:#888;">Rating</div></div>
+    <div class="hero-stats">
+      <div><div class="stat-num">500+</div><div class="stat-label">Happy Guests</div></div>
+      <div><div class="stat-num">50+</div><div class="stat-label">Menu Items</div></div>
+      <div><div class="stat-num">4.8</div><div class="stat-label">Rating</div></div>
+      <div><div class="stat-num">10+</div><div class="stat-label">Years</div></div>
     </div>
   </div>
   <div class="hero-right">
-    <img class="hero-img-main" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80" alt="Restaurant">
-    <div class="hero-badge"><div class="num">10+</div><div class="text">Years of Experience</div></div>
+    <div class="hero-img-wrap">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" alt="Restaurant">
+    </div>
+    <div class="float-card float-card-1">
+      <div class="fc-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#16A34A"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Open Now
+      </div>
+      <div style="font-size:12px;color:#888;margin-top:4px;">11 AM – 11 PM Daily</div>
+    </div>
+    <div class="float-card float-card-2">
+      <div class="fc-num">4.8★</div>
+      <div class="fc-text">Google Rating</div>
+    </div>
   </div>
 </section>
+
+<!-- STRIP -->
 <div class="strip">
-  <div class="strip-item"><div class="n">100%</div><div class="l">Fresh Ingredients</div></div>
-  <div class="strip-item"><div class="n">Fast</div><div class="l">Table Service</div></div>
-  <div class="strip-item"><div class="n">Hygienic</div><div class="l">Kitchen</div></div>
-  <div class="strip-item"><div class="n">Daily</div><div class="l">Fresh Menu</div></div>
+  <div class="strip-item"><div class="strip-n">100%</div><div class="strip-l">Fresh Every Day</div></div>
+  <div class="strip-item"><div class="strip-n">Fast</div><div class="strip-l">Table Service</div></div>
+  <div class="strip-item"><div class="strip-n">Hygienic</div><div class="strip-l">Certified Kitchen</div></div>
+  <div class="strip-item"><div class="strip-n">Pure Veg</div><div class="strip-l">Options Available</div></div>
 </div>
+
+<!-- ABOUT -->
 <section id="about">
 <div class="about">
-  <div class="about-imgs">
-    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Restaurant">
+  <div class="about-gallery">
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80" alt="Restaurant Interior">
     <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80" alt="Food">
-    <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&q=80" alt="Dining">
+    <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&q=80" alt="Chef">
   </div>
-  <div class="about-right">
-    <h2>About <span>Restaurant</span></h2>
-    <p>We are proud to serve the people of Surat with the finest dining experience. Every dish is prepared fresh daily by our expert chefs using hand-picked ingredients. Whether you are celebrating a special occasion or just want a great meal — Restaurant is your place.</p>
-    <p>Visit us at: <strong>Surat, Gujarat</strong></p>
-    <div style="margin-top:20px;">
-      <span class="tag">🍽️ Dine In</span>
-      <span class="tag">📦 Takeaway</span>
-      <span class="tag">🏠 Home Delivery</span>
-      <span class="tag">🎉 Events</span>
+  <div>
+    <div class="about-tag">Our Story</div>
+    <h2>About <em>Restaurant</em></h2>
+    <p>We are proud to bring the finest dining experience to the people of Surat. Every dish is crafted fresh daily by our expert chefs using hand-picked ingredients sourced from local markets.</p>
+    <p>Visit us at <strong>Surat, Gujarat</strong> and experience the warmth of authentic Gujarati hospitality.</p>
+    <div class="about-chips">
+      <span class="chip">🍽 Dine In</span>
+      <span class="chip">📦 Takeaway</span>
+      <span class="chip">🚚 Home Delivery</span>
+      <span class="chip">🎉 Events & Catering</span>
+      <span class="chip">👨‍👩‍👧 Family Friendly</span>
     </div>
   </div>
 </div>
 </section>
-<section class="menu-section" id="menu">
-<div class="section-head">
-  <h2>Our <span>Menu</span></h2>
-  <p>Fresh, delicious and made with love every single day</p>
-</div>
-<div class="menu-grid">
-  <div class="menu-card">
-    <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=500&q=80" alt="Paneer Butter Masala">
-    <div class="menu-card-body"><h3>Paneer Butter Masala</h3><p>Rich creamy tomato gravy with soft paneer cubes</p><div class="menu-card-footer"><span class="price">₹220</span><button class="order-btn">Order Now</button></div></div>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="section-header">
+    <div class="tag">Our Specialties</div>
+    <h2>Signature <em>Dishes</em></h2>
+    <p>Fresh, delicious and made with love every single day</p>
   </div>
-  <div class="menu-card">
-    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500&q=80" alt="Veg Thali">
-    <div class="menu-card-body"><h3>Veg Thali</h3><p>Complete meal with dal, sabzi, roti, rice and dessert</p><div class="menu-card-footer"><span class="price">₹180</span><button class="order-btn">Order Now</button></div></div>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <div class="menu-card-img">
+        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=500&q=80" alt="Paneer Butter Masala">
+        <span class="menu-badge">Chef's Pick</span>
+      </div>
+      <div class="menu-body">
+        <h3>Paneer Butter Masala</h3>
+        <p>Rich creamy tomato gravy with soft paneer cubes, slow cooked to perfection</p>
+        <div class="menu-footer"><span class="menu-price">₹220</span><button class="order-btn">Order Now</button></div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <div class="menu-card-img">
+        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500&q=80" alt="Dal Makhani">
+        <span class="menu-badge">Popular</span>
+      </div>
+      <div class="menu-body">
+        <h3>Dal Makhani</h3>
+        <p>Slow cooked black lentils simmered overnight in butter and fresh cream</p>
+        <div class="menu-footer"><span class="menu-price">₹180</span><button class="order-btn">Order Now</button></div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <div class="menu-card-img">
+        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=80" alt="Veg Biryani">
+      </div>
+      <div class="menu-body">
+        <h3>Veg Biryani</h3>
+        <p>Fragrant basmati rice layered with fresh seasonal vegetables and whole spices</p>
+        <div class="menu-footer"><span class="menu-price">₹250</span><button class="order-btn">Order Now</button></div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <div class="menu-card-img">
+        <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=500&q=80" alt="Chole Bhature">
+        <span class="menu-badge">Bestseller</span>
+      </div>
+      <div class="menu-body">
+        <h3>Chole Bhature</h3>
+        <p>Fluffy golden fried bread served with spicy chickpea curry — a Punjabi classic</p>
+        <div class="menu-footer"><span class="menu-price">₹160</span><button class="order-btn">Order Now</button></div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <div class="menu-card-img">
+        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=500&q=80" alt="Veg Thali">
+        <span class="menu-badge">Value Deal</span>
+      </div>
+      <div class="menu-body">
+        <h3>Veg Thali</h3>
+        <p>Complete traditional meal — dal, sabzi, roti, steamed rice, pickle and dessert</p>
+        <div class="menu-footer"><span class="menu-price">₹299</span><button class="order-btn">Order Now</button></div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <div class="menu-card-img">
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&q=80" alt="Gulab Jamun">
+      </div>
+      <div class="menu-body">
+        <h3>Gulab Jamun</h3>
+        <p>Soft milk dumplings soaked in rose-flavoured sugar syrup — the perfect ending</p>
+        <div class="menu-footer"><span class="menu-price">₹89</span><button class="order-btn">Order Now</button></div>
+      </div>
+    </div>
   </div>
-  <div class="menu-card">
-    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=80" alt="Veg Biryani">
-    <div class="menu-card-body"><h3>Veg Biryani</h3><p>Fragrant basmati rice with fresh vegetables and spices</p><div class="menu-card-footer"><span class="price">₹250</span><button class="order-btn">Order Now</button></div></div>
-  </div>
-  <div class="menu-card">
-    <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=500&q=80" alt="Chole Bhature">
-    <div class="menu-card-body"><h3>Chole Bhature</h3><p>Fluffy fried bread with spicy chickpea curry</p><div class="menu-card-footer"><span class="price">₹160</span><button class="order-btn">Order Now</button></div></div>
-  </div>
-  <div class="menu-card">
-    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=500&q=80" alt="Dal Makhani">
-    <div class="menu-card-body"><h3>Dal Makhani</h3><p>Slow cooked black lentils in butter and cream</p><div class="menu-card-footer"><span class="price">₹299</span><button class="order-btn">Order Now</button></div></div>
-  </div>
-  <div class="menu-card">
-    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&q=80" alt="Samosa">
-    <div class="menu-card-body"><h3>Samosa</h3><p>Made up of Maida and Delicious Fast food</p><div class="menu-card-footer"><span class="price">₹89</span><button class="order-btn">Order Now</button></div></div>
-  </div>
-</div>
 </section>
-<section class="contact-section" id="contact">
-<div class="contact-inner">
-  <div class="contact-left">
-    <h2>Visit <span>Restaurant</span> Today</h2>
-    <p>We would love to serve you! Come visit us or give us a call. We are open 7 days a week for lunch and dinner.</p>
-    <div class="contact-btns">
-      <a href="tel:9999999999" class="btn-call">📞 Call: +91 9999999999</a>
-      <a href="https://wa.me/919999999999" class="btn-wa">💬 WhatsApp: +91 9999999999</a>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="reviews">
+  <div class="section-header">
+    <div class="tag">Reviews</div>
+    <h2>What Our <em>Guests</em> Say</h2>
+    <p>Real experiences from real customers in Surat</p>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"The food here is absolutely outstanding! The paneer butter masala is the best I have had in Surat. Will definitely come back again and again!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">R</div>
+        <div><div class="testi-name">Rahul Patel</div><div class="testi-loc">Adajan, Surat</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Amazing ambience and even better food. The staff is so welcoming and the Veg Thali is a steal at that price. Highly recommend to everyone!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">P</div>
+        <div><div class="testi-name">Priya Shah</div><div class="testi-loc">Udhna, Surat</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Best Chole Bhature in the entire city! Freshly made, super crispy and the chhole is perfectly spiced. My family comes here every Sunday!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">M</div>
+        <div><div class="testi-name">Mehul Desai</div><div class="testi-loc">Ring Road, Surat</div></div>
+      </div>
     </div>
   </div>
-  <div class="contact-right">
-    <div class="info-item">
-      <div class="info-icon">📍</div>
-      <div class="info-text"><h4>Our Location</h4><p>Surat, Gujarat</p></div>
-    </div>
-    <div class="info-item">
-      <div class="info-icon">📞</div>
-      <div class="info-text"><h4>Phone Number</h4><p>+91 9999999999</p></div>
-    </div>
-    <div class="info-item">
-      <div class="info-icon">🕐</div>
-      <div class="info-text"><h4>Opening Hours</h4><p>Mon - Sun: 11:00 AM - 11:00 PM</p></div>
-    </div>
-    <div class="info-item">
-      <div class="info-icon">💬</div>
-      <div class="info-text"><h4>WhatsApp</h4><p>+91 9999999999</p></div>
-    </div>
-  </div>
-</div>
 </section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <h2>Visit <em>Restaurant</em> Today</h2>
+      <p class="contact-sub">We are open 7 days a week, 365 days a year. Come experience the taste that keeps Surat coming back for more.</p>
+      <div class="contact-btns">
+        <a href="tel:9999999999" class="btn-call">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.39 2.18 2 2 0 012.37 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.7 7.56a16 16 0 006.74 6.74l1.92-1.92a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Call: +91 9999999999
+        </a>
+        <a href="https://wa.me/919999999999" class="btn-wa">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          WhatsApp: +91 9999999999
+        </a>
+      </div>
+    </div>
+    <div class="info-cards">
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <div><div class="info-title">Our Location</div><div class="info-val">Surat, Gujarat</div></div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📞</div>
+        <div><div class="info-title">Phone & WhatsApp</div><div class="info-val">+91 9999999999</div></div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🕐</div>
+        <div><div class="info-title">Opening Hours</div><div class="info-val">Monday – Sunday<br>11:00 AM – 11:00 PM</div></div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🚗</div>
+        <div><div class="info-title">Parking</div><div class="info-val">Free parking available near the restaurant</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-logo">Restaurant</div>
-  <div class="footer-text">© 2024 Restaurant. All rights reserved. | Surat, Gujarat</div>
+  <div class="footer-text">© 2024 Restaurant. All rights reserved. | Surat, Gujarat, India</div>
 </footer>
+
 </body>
 </html>
