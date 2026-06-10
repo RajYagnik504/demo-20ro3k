@@ -22,12 +22,10 @@
 html{scroll-behavior:smooth;}
 body{font-family:'Karla',sans-serif;background:var(--white);color:var(--fg);}
 
-/* SCROLLBAR */
 ::-webkit-scrollbar{width:6px;}
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px;}
 
-/* NAV */
 nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);padding:0 60px;height:70px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 0 var(--border);z-index:1000;}
 .logo-wrap{display:flex;align-items:center;gap:12px;}
 .logo-icon{width:40px;height:40px;background:var(--red);border-radius:10px;display:flex;align-items:center;justify-content:center;}
@@ -40,7 +38,6 @@ nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.97);backdrop-f
 .btn-nav{background:var(--red)!important;color:white!important;padding:10px 24px;border-radius:8px;font-weight:700!important;font-size:14px;transition:all .2s!important;}
 .btn-nav:hover{background:var(--red-dark)!important;transform:translateY(-1px);box-shadow:0 6px 20px rgba(200,16,46,0.3)!important;}
 
-/* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:90px 60px 60px;gap:60px;background:var(--bg);}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--red-light);color:var(--red);padding:8px 18px;border-radius:50px;font-size:13px;font-weight:700;margin-bottom:24px;border:1px solid var(--border);}
 .hero h1{font-family:'Playfair Display SC',serif;font-size:54px;font-weight:700;line-height:1.08;color:var(--fg);margin-bottom:20px;}
@@ -65,14 +62,12 @@ nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.97);backdrop-f
 .badge-sub{font-size:11px;color:#999;}
 .badge-rating{font-family:'Playfair Display SC',serif;font-size:22px;font-weight:700;color:var(--red);}
 
-/* STRIP */
 .strip{background:var(--red);color:white;padding:0;display:grid;grid-template-columns:repeat(4,1fr);}
 .strip-item{padding:22px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.15);}
 .strip-item:last-child{border-right:none;}
 .strip-n{font-family:'Playfair Display SC',serif;font-size:26px;font-weight:700;margin-bottom:4px;}
 .strip-l{font-size:12px;opacity:0.8;letter-spacing:.5px;text-transform:uppercase;}
 
-/* ABOUT */
 .about{padding:100px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1300px;margin:0 auto;}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .gallery img{width:100%;object-fit:cover;border-radius:16px;transition:transform .4s;}
@@ -86,7 +81,6 @@ nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.97);backdrop-f
 .about-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
 .chip{background:var(--muted);border:1px solid var(--border);color:var(--fg);padding:7px 16px;border-radius:50px;font-size:13px;font-weight:600;}
 
-/* MENU */
 .menu-section{background:var(--bg);padding:100px 60px;}
 .menu-section .section-header{text-align:center;margin-bottom:64px;}
 .menu-tabs{display:flex;justify-content:center;gap:12px;margin-bottom:48px;flex-wrap:wrap;}
@@ -111,7 +105,6 @@ nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.97);backdrop-f
 .order-btn{background:var(--red-light);color:var(--red);border:1.5px solid var(--border);padding:7px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Karla',sans-serif;}
 .order-btn:hover{background:var(--red);color:white;border-color:var(--red);}
 
-/* REVIEWS */
 .reviews{padding:100px 60px;background:white;}
 .reviews .section-header{text-align:center;margin-bottom:64px;}
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto;}
@@ -124,7 +117,6 @@ nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.97);backdrop-f
 .reviewer-name{font-weight:700;font-size:14px;color:var(--fg);}
 .reviewer-loc{font-size:12px;color:#999;margin-top:2px;}
 
-/* CONTACT */
 .contact{background:var(--fg);padding:100px 60px;color:white;}
 .contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
 .contact h2{font-family:'Playfair Display SC',serif;font-size:42px;font-weight:700;margin-bottom:14px;line-height:1.2;}
@@ -142,13 +134,11 @@ nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.97);backdrop-f
 .info-title{font-weight:700;font-size:14px;color:white;margin-bottom:4px;}
 .info-val{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5;}
 
-/* FOOTER */
 footer{background:#150303;color:rgba(255,255,255,0.45);padding:28px 60px;display:flex;justify-content:space-between;align-items:center;}
 .footer-brand{display:flex;align-items:center;gap:10px;}
 .footer-logo{font-family:'Playfair Display SC',serif;font-size:18px;font-weight:700;color:#F87171;}
 .footer-text{font-size:13px;}
 
-/* RESPONSIVE */
 @media(max-width:960px){
 nav{padding:0 20px;}
 .nav-links{display:none;}
@@ -172,7 +162,6 @@ footer{flex-direction:column;gap:10px;text-align:center;padding:24px 20px;}
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="logo-wrap">
     <div class="logo-icon">
@@ -183,14 +172,13 @@ footer{flex-direction:column;gap:10px;text-align:center;padding:24px 20px;}
   <div class="nav-links">
     <a href="#hero">Home</a>
     <a href="#about">About</a>
-    <a href="#menu">Menu</a>
+    <a href="menu.html">Menu</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
     <a href="https://wa.me/919374512344" class="btn-nav">Reserve Table</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="hero">
   <div>
     <div class="hero-eyebrow">
@@ -200,7 +188,8 @@ footer{flex-direction:column;gap:10px;text-align:center;padding:24px 20px;}
     <h1>Where Every Bite Tells a <em>Story</em></h1>
     <p class="hero-desc">Welcome to Tipsy Topsy — serving authentic Indian flavours with love. Dine in, takeaway or get it delivered. Located at E-51-52-53, Kanaknidhi Shopping Complex, Surat.</p>
     <div class="hero-actions">
-      <a href="#menu" class="btn-primary">
+      <!-- ✅ UPDATED: Links to menu.html instead of #menu -->
+      <a href="menu.html" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
         View Full Menu
       </a>
@@ -211,7 +200,7 @@ footer{flex-direction:column;gap:10px;text-align:center;padding:24px 20px;}
     </div>
     <div class="hero-stats">
       <div class="stat-box"><div class="stat-num">500+</div><div class="stat-label">Happy Guests</div></div>
-      <div class="stat-box"><div class="stat-num">30+</div><div class="stat-label">Menu Items</div></div>
+      <div class="stat-box"><div class="stat-num">14+</div><div class="stat-label">Menu Items</div></div>
       <div class="stat-box"><div class="stat-num">4.8★</div><div class="stat-label">Rating</div></div>
       <div class="stat-box"><div class="stat-num">Fast</div><div class="stat-label">Delivery</div></div>
     </div>
@@ -229,7 +218,6 @@ footer{flex-direction:column;gap:10px;text-align:center;padding:24px 20px;}
   </div>
 </section>
 
-<!-- STRIP -->
 <div class="strip">
   <div class="strip-item"><div class="strip-n">100%</div><div class="strip-l">Fresh Daily</div></div>
   <div class="strip-item"><div class="strip-n">Jain</div><div class="strip-l">Options Available</div></div>
@@ -237,7 +225,6 @@ footer{flex-direction:column;gap:10px;text-align:center;padding:24px 20px;}
   <div class="strip-item"><div class="strip-n">Pure Veg</div><div class="strip-l">Certified Kitchen</div></div>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
 <div class="about">
   <div class="gallery">
@@ -261,7 +248,6 @@ footer{flex-direction:column;gap:10px;text-align:center;padding:24px 20px;}
 </div>
 </section>
 
-<!-- MENU -->
 <section class="menu-section" id="menu">
   <div class="section-header">
     <div class="section-tag">Our Specialties</div>
@@ -336,14 +322,14 @@ footer{flex-direction:column;gap:10px;text-align:center;padding:24px 20px;}
     </div>
   </div>
   <div style="text-align:center;margin-top:40px;">
-    <a href="https://wa.me/919374512344" class="btn-primary" style="display:inline-flex;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      Order on WhatsApp
+    <!-- ✅ UPDATED: Links to menu.html -->
+    <a href="menu.html" class="btn-primary" style="display:inline-flex;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      View Full Menu — All 14 Items
     </a>
   </div>
 </section>
 
-<!-- REVIEWS -->
 <section class="reviews" id="reviews">
   <div class="section-header">
     <div class="section-tag">Customer Love</div>
@@ -378,7 +364,6 @@ footer{flex-direction:column;gap:10px;text-align:center;padding:24px 20px;}
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div>
