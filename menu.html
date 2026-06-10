@@ -3,410 +3,373 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tipsy Topsy | Indian Takeaway & Dine In Surat</title>
+<title>Chamunda Tea — Full Menu</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
---red:#C8102E;
---red-dark:#A50E26;
---red-light:#FDECEA;
---orange:#E07B2A;
---bg:#FFFAF8;
---fg:#2C0A0A;
---muted:#F5EDE8;
---border:#F5C6B8;
---white:#FFFFFF;
---shadow:0 4px 24px rgba(200,16,46,0.10);
-}
+:root{--red:#C8102E;--red-dark:#A50E26;--red-light:#FDECEA;--bg:#FFFAF8;--fg:#2C0A0A;--muted:#F5EDE8;--border:#F5C6B8;--white:#FFFFFF;}
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Karla',sans-serif;background:var(--white);color:var(--fg);}
-
-::-webkit-scrollbar{width:6px;}
-::-webkit-scrollbar-track{background:var(--bg);}
-::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px;}
-
+body{font-family:'Karla',sans-serif;background:var(--bg);color:var(--fg);}
 nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);padding:0 60px;height:70px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 0 var(--border);z-index:1000;}
-.logo-wrap{display:flex;align-items:center;gap:12px;}
-.logo-icon{width:40px;height:40px;background:var(--red);border-radius:10px;display:flex;align-items:center;justify-content:center;}
-.logo-icon svg{width:24px;height:24px;fill:white;}
-.logo-text{font-family:'Playfair Display SC',serif;font-size:20px;font-weight:700;color:var(--fg);}
-.logo-text span{color:var(--red);}
-.nav-links{display:flex;align-items:center;gap:32px;}
-.nav-links a{text-decoration:none;color:#555;font-weight:600;font-size:14px;letter-spacing:.3px;transition:color .2s;cursor:pointer;}
-.nav-links a:hover{color:var(--red);}
-.btn-nav{background:var(--red)!important;color:white!important;padding:10px 24px;border-radius:8px;font-weight:700!important;font-size:14px;transition:all .2s!important;}
-.btn-nav:hover{background:var(--red-dark)!important;transform:translateY(-1px);box-shadow:0 6px 20px rgba(200,16,46,0.3)!important;}
-
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:90px 60px 60px;gap:60px;background:var(--bg);}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--red-light);color:var(--red);padding:8px 18px;border-radius:50px;font-size:13px;font-weight:700;margin-bottom:24px;border:1px solid var(--border);}
-.hero h1{font-family:'Playfair Display SC',serif;font-size:54px;font-weight:700;line-height:1.08;color:var(--fg);margin-bottom:20px;}
-.hero h1 em{font-style:normal;color:var(--red);}
-.hero-desc{font-size:17px;color:#777;line-height:1.75;max-width:460px;margin-bottom:36px;}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px;}
-.btn-primary{background:var(--red);color:white;padding:15px 32px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .25s;cursor:pointer;}
-.btn-primary:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 10px 28px rgba(200,16,46,0.32);}
-.btn-secondary{background:white;color:var(--fg);padding:15px 32px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--border);transition:all .25s;}
-.btn-secondary:hover{border-color:var(--red);color:var(--red);}
-.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-.stat-box{background:white;border-radius:14px;padding:16px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--border);}
-.stat-num{font-family:'Playfair Display SC',serif;font-size:26px;font-weight:700;color:var(--red);}
-.stat-label{font-size:12px;color:#999;margin-top:3px;}
-.hero-right{position:relative;}
-.hero-img-main{width:100%;height:560px;object-fit:cover;border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,0.15);}
-.float-badge{position:absolute;background:white;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,0.12);padding:12px 18px;display:flex;align-items:center;gap:10px;}
-.float-badge-1{bottom:28px;left:-24px;}
-.float-badge-2{top:28px;right:-16px;}
-.badge-dot{width:10px;height:10px;border-radius:50%;background:#22C55E;flex-shrink:0;}
-.badge-text{font-size:13px;font-weight:700;color:var(--fg);}
-.badge-sub{font-size:11px;color:#999;}
-.badge-rating{font-family:'Playfair Display SC',serif;font-size:22px;font-weight:700;color:var(--red);}
-
-.strip{background:var(--red);color:white;padding:0;display:grid;grid-template-columns:repeat(4,1fr);}
-.strip-item{padding:22px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.15);}
-.strip-item:last-child{border-right:none;}
-.strip-n{font-family:'Playfair Display SC',serif;font-size:26px;font-weight:700;margin-bottom:4px;}
-.strip-l{font-size:12px;opacity:0.8;letter-spacing:.5px;text-transform:uppercase;}
-
-.about{padding:100px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1300px;margin:0 auto;}
-.gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.gallery img{width:100%;object-fit:cover;border-radius:16px;transition:transform .4s;}
-.gallery img:hover{transform:scale(1.03);}
-.gallery img:first-child{grid-column:span 2;height:240px;}
-.gallery img:not(:first-child){height:160px;}
-.section-tag{display:inline-block;background:var(--red-light);color:var(--red);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;margin-bottom:16px;letter-spacing:.5px;text-transform:uppercase;}
-.section-title{font-family:'Playfair Display SC',serif;font-size:38px;font-weight:700;color:var(--fg);margin-bottom:18px;line-height:1.2;}
-.section-title em{font-style:normal;color:var(--red);}
-.about-text{color:#777;line-height:1.8;margin-bottom:14px;font-size:16px;}
-.about-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
-.chip{background:var(--muted);border:1px solid var(--border);color:var(--fg);padding:7px 16px;border-radius:50px;font-size:13px;font-weight:600;}
-
-.menu-section{background:var(--bg);padding:100px 60px;}
-.menu-section .section-header{text-align:center;margin-bottom:64px;}
-.menu-tabs{display:flex;justify-content:center;gap:12px;margin-bottom:48px;flex-wrap:wrap;}
-.tab-btn{background:white;border:1.5px solid var(--border);color:#777;padding:10px 24px;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;font-family:'Karla',sans-serif;}
-.tab-btn.active,.tab-btn:hover{background:var(--red);color:white;border-color:var(--red);}
-.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto;}
-.menu-card{background:white;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:all .3s;border:1px solid var(--border);}
-.menu-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(200,16,46,0.14);}
-.menu-img{position:relative;height:210px;overflow:hidden;}
-.menu-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
-.menu-card:hover .menu-img img{transform:scale(1.07);}
-.menu-badge{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:50px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
-.badge-chef{background:var(--red);color:white;}
-.badge-pop{background:#F59E0B;color:white;}
-.badge-val{background:#16A34A;color:white;}
-.badge-jain{background:#8B5CF6;color:white;}
-.menu-body{padding:20px;}
-.menu-body h3{font-family:'Playfair Display SC',serif;font-size:17px;font-weight:700;margin-bottom:6px;color:var(--fg);}
-.menu-body p{color:#999;font-size:13px;line-height:1.6;margin-bottom:16px;}
-.menu-footer{display:flex;justify-content:space-between;align-items:center;}
-.price{font-family:'Playfair Display SC',serif;font-size:20px;font-weight:700;color:var(--red);}
-.order-btn{background:var(--red-light);color:var(--red);border:1.5px solid var(--border);padding:7px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Karla',sans-serif;}
+.logo{font-family:'Playfair Display SC',serif;font-size:20px;font-weight:700;color:var(--fg);}
+.logo span{color:var(--red);}
+.back-btn{background:var(--red);color:white;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;}
+.hero{background:var(--red);color:white;padding:110px 60px 60px;text-align:center;}
+.hero h1{font-family:'Playfair Display SC',serif;font-size:48px;font-weight:700;margin-bottom:12px;}
+.hero h1 em{font-style:normal;color:#FFD700;}
+.hero p{font-size:17px;opacity:0.85;margin-bottom:24px;}
+.jain-note{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);padding:8px 20px;border-radius:50px;font-size:13px;font-weight:600;}
+.menu-page{max-width:1200px;margin:0 auto;padding:60px 40px;}
+.search-bar{background:white;border-radius:16px;padding:20px 24px;margin-bottom:48px;display:flex;gap:14px;box-shadow:0 4px 20px rgba(200,16,46,0.08);border:1px solid var(--border);}
+.search-bar input{flex:1;border:none;outline:none;font-size:16px;font-family:'Karla',sans-serif;color:var(--fg);background:transparent;}
+.search-bar input::placeholder{color:#bbb;}
+.search-icon{color:var(--red);font-size:20px;}
+.category{margin-bottom:52px;}
+.category-header{display:flex;align-items:center;gap:16px;margin-bottom:28px;padding-bottom:16px;border-bottom:2px solid var(--border);}
+.category-icon{width:44px;height:44px;background:var(--red);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;flex-shrink:0;}
+.category-title{font-family:'Playfair Display SC',serif;font-size:28px;font-weight:700;color:var(--fg);}
+.category-count{background:var(--red-light);color:var(--red);padding:4px 12px;border-radius:50px;font-size:12px;font-weight:700;}
+.category-timing{font-size:13px;color:#999;margin-left:auto;}
+.items-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.item-card{background:white;border-radius:16px;padding:20px;display:flex;gap:16px;border:1px solid var(--border);transition:all .3s;cursor:pointer;}
+.item-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(200,16,46,0.12);border-color:var(--red);}
+.item-img{width:90px;height:90px;border-radius:12px;object-fit:cover;flex-shrink:0;}
+.item-info{flex:1;}
+.item-badges{display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap;}
+.badge{padding:3px 10px;border-radius:50px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
+.badge-jain{background:#EDE9FE;color:#7C3AED;}
+.badge-spicy{background:#FEF2F2;color:#DC2626;}
+.badge-popular{background:#FEF9C3;color:#854D0E;}
+.badge-new{background:#DCFCE7;color:#15803D;}
+.item-name{font-family:'Playfair Display SC',serif;font-size:16px;font-weight:700;color:var(--fg);margin-bottom:6px;}
+.item-desc{font-size:13px;color:#888;line-height:1.6;margin-bottom:12px;}
+.item-footer{display:flex;justify-content:space-between;align-items:center;}
+.item-price{font-family:'Playfair Display SC',serif;font-size:20px;font-weight:700;color:var(--red);}
+.item-size{font-size:12px;color:#aaa;margin-top:2px;}
+.order-btn{background:var(--red-light);color:var(--red);border:1.5px solid var(--border);padding:7px 16px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Karla',sans-serif;}
 .order-btn:hover{background:var(--red);color:white;border-color:var(--red);}
-
-.reviews{padding:100px 60px;background:white;}
-.reviews .section-header{text-align:center;margin-bottom:64px;}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto;}
-.review-card{background:var(--bg);border-radius:20px;padding:30px;border:1px solid var(--border);transition:transform .3s;}
-.review-card:hover{transform:translateY(-6px);}
-.review-stars{color:#F59E0B;font-size:16px;letter-spacing:3px;margin-bottom:14px;}
-.review-text{font-size:15px;color:#666;line-height:1.75;font-style:italic;margin-bottom:20px;}
-.reviewer{display:flex;align-items:center;gap:12px;}
-.reviewer-avatar{width:44px;height:44px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;color:white;font-family:'Playfair Display SC',serif;font-weight:700;font-size:16px;flex-shrink:0;}
-.reviewer-name{font-weight:700;font-size:14px;color:var(--fg);}
-.reviewer-loc{font-size:12px;color:#999;margin-top:2px;}
-
-.contact{background:var(--fg);padding:100px 60px;color:white;}
-.contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
-.contact h2{font-family:'Playfair Display SC',serif;font-size:42px;font-weight:700;margin-bottom:14px;line-height:1.2;}
-.contact h2 em{font-style:normal;color:#F87171;}
-.contact-sub{color:rgba(255,255,255,0.6);font-size:16px;line-height:1.7;margin-bottom:36px;}
-.contact-btns{display:flex;flex-direction:column;gap:14px;}
-.btn-call{background:var(--red);color:white;padding:18px 36px;border-radius:12px;font-size:17px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .25s;}
-.btn-call:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 12px 30px rgba(200,16,46,0.4);}
-.btn-wa{background:#16A34A;color:white;padding:18px 36px;border-radius:12px;font-size:17px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .25s;}
-.btn-wa:hover{background:#15803D;transform:translateY(-2px);box-shadow:0 12px 30px rgba(22,163,74,0.4);}
-.info-list{display:flex;flex-direction:column;gap:16px;}
-.info-item{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 22px;display:flex;gap:16px;align-items:flex-start;transition:background .2s;}
-.info-item:hover{background:rgba(255,255,255,0.1);}
-.info-icon{width:44px;height:44px;background:var(--red);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;}
-.info-title{font-weight:700;font-size:14px;color:white;margin-bottom:4px;}
-.info-val{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5;}
-
-footer{background:#150303;color:rgba(255,255,255,0.45);padding:28px 60px;display:flex;justify-content:space-between;align-items:center;}
-.footer-brand{display:flex;align-items:center;gap:10px;}
-.footer-logo{font-family:'Playfair Display SC',serif;font-size:18px;font-weight:700;color:#F87171;}
-.footer-text{font-size:13px;}
-
-@media(max-width:960px){
+.whatsapp-bar{position:fixed;bottom:0;width:100%;background:#16A34A;color:white;padding:16px 60px;display:flex;justify-content:space-between;align-items:center;z-index:999;}
+.wa-text{font-size:16px;font-weight:700;}
+.wa-sub{font-size:13px;opacity:0.85;}
+.wa-btn{background:white;color:#16A34A;padding:12px 28px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;}
+.add-item-btn{position:fixed;right:24px;bottom:80px;background:var(--red);color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;cursor:pointer;box-shadow:0 8px 24px rgba(200,16,46,0.4);transition:all .2s;z-index:998;text-decoration:none;}
+.add-item-btn:hover{transform:scale(1.1);}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:2000;align-items:center;justify-content:center;}
+.modal.open{display:flex;}
+.modal-box{background:white;border-radius:24px;padding:36px;width:500px;max-width:90vw;max-height:90vh;overflow-y:auto;}
+.modal-title{font-family:'Playfair Display SC',serif;font-size:24px;font-weight:700;margin-bottom:24px;color:var(--fg);}
+.form-group{margin-bottom:18px;}
+.form-label{font-size:14px;font-weight:700;color:var(--fg);margin-bottom:8px;display:block;}
+.form-input{width:100%;border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;font-size:15px;font-family:'Karla',sans-serif;color:var(--fg);outline:none;transition:border .2s;}
+.form-input:focus{border-color:var(--red);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.form-select{width:100%;border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;font-size:15px;font-family:'Karla',sans-serif;color:var(--fg);outline:none;background:white;}
+.modal-btns{display:flex;gap:12px;margin-top:24px;}
+.btn-submit{flex:1;background:var(--red);color:white;padding:14px;border-radius:10px;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'Karla',sans-serif;}
+.btn-cancel{background:var(--muted);color:var(--fg);padding:14px 24px;border-radius:10px;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'Karla',sans-serif;}
+@media(max-width:768px){
 nav{padding:0 20px;}
-.nav-links{display:none;}
-.hero{grid-template-columns:1fr;padding:85px 20px 50px;gap:36px;}
-.hero h1{font-size:36px;}
-.hero-img-main{height:300px;}
-.float-badge{display:none;}
-.hero-stats{grid-template-columns:repeat(2,1fr);}
-.strip{grid-template-columns:repeat(2,1fr);}
-.strip-item{border-bottom:1px solid rgba(255,255,255,0.15);}
-.about{grid-template-columns:1fr;padding:60px 20px;gap:40px;}
-.menu-section{padding:60px 20px;}
-.menu-grid{grid-template-columns:1fr;}
-.reviews{padding:60px 20px;}
-.reviews-grid{grid-template-columns:1fr;}
-.contact{padding:60px 20px;}
-.contact-inner{grid-template-columns:1fr;gap:40px;}
-footer{flex-direction:column;gap:10px;text-align:center;padding:24px 20px;}
+.hero{padding:90px 20px 40px;}
+.hero h1{font-size:32px;}
+.menu-page{padding:40px 20px 100px;}
+.items-grid{grid-template-columns:1fr;}
+.whatsapp-bar{padding:14px 20px;}
+.search-bar{padding:14px 18px;}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo-wrap">
-    <div class="logo-icon">
-      <svg viewBox="0 0 24 24"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8-15.03-8-15.03 0h15.03zM1.02 17h15v2h-15z"/></svg>
-    </div>
-    <div class="logo-text">Tipsy <span>Topsy</span></div>
-  </div>
-  <div class="nav-links">
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="menu.html">Menu</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
-    <a href="https://wa.me/919374512344" class="btn-nav">Reserve Table</a>
-  </div>
+  <div class="logo">Chamunda <span>Tea</span></div>
+  <a href="index.html" class="back-btn">← Back to Website</a>
 </nav>
 
-<section class="hero" id="hero">
-  <div>
-    <div class="hero-eyebrow">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      Surat's Favourite Indian Restaurant
-    </div>
-    <h1>Where Every Bite Tells a <em>Story</em></h1>
-    <p class="hero-desc">Welcome to Tipsy Topsy — serving authentic Indian flavours with love. Dine in, takeaway or get it delivered. Located at E-51-52-53, Kanaknidhi Shopping Complex, Surat.</p>
-    <div class="hero-actions">
-      <!-- ✅ UPDATED: Links to menu.html instead of #menu -->
-      <a href="menu.html" class="btn-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        View Full Menu
-      </a>
-      <a href="https://wa.me/919374512344" class="btn-secondary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        WhatsApp Order
-      </a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-box"><div class="stat-num">500+</div><div class="stat-label">Happy Guests</div></div>
-      <div class="stat-box"><div class="stat-num">14+</div><div class="stat-label">Menu Items</div></div>
-      <div class="stat-box"><div class="stat-num">4.8★</div><div class="stat-label">Rating</div></div>
-      <div class="stat-box"><div class="stat-num">Fast</div><div class="stat-label">Delivery</div></div>
-    </div>
-  </div>
-  <div class="hero-right">
-    <img class="hero-img-main" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" alt="Tipsy Topsy Restaurant">
-    <div class="float-badge float-badge-1">
-      <div class="badge-dot"></div>
-      <div><div class="badge-text">Open Now</div><div class="badge-sub">9:30 AM – 10:00 PM</div></div>
-    </div>
-    <div class="float-badge float-badge-2">
-      <div class="badge-rating">4.8★</div>
-      <div><div class="badge-text">Google</div><div class="badge-sub">Rating</div></div>
-    </div>
-  </div>
-</section>
-
-<div class="strip">
-  <div class="strip-item"><div class="strip-n">100%</div><div class="strip-l">Fresh Daily</div></div>
-  <div class="strip-item"><div class="strip-n">Jain</div><div class="strip-l">Options Available</div></div>
-  <div class="strip-item"><div class="strip-n">Fast</div><div class="strip-l">Delivery & Takeaway</div></div>
-  <div class="strip-item"><div class="strip-n">Pure Veg</div><div class="strip-l">Certified Kitchen</div></div>
+<div class="hero">
+  <h1>Our <em>Full Menu</em></h1>
+  <p>Fresh, authentic Indian food made with love — available for dine in, takeaway and delivery</p>
+  <div class="jain-note">🌿 Jain options available on all dishes — just ask!</div>
 </div>
 
-<section id="about">
-<div class="about">
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80" alt="Restaurant Interior">
-    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80" alt="Food">
-    <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&q=80" alt="Chef">
+<div class="menu-page">
+  <div class="search-bar">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search for dishes, categories..." oninput="filterItems()">
   </div>
+
+  <div id="menuContainer">
+
+    <!-- CATEGORY 1: PANEER SPECIALS -->
+    <div class="category" data-category="paneer">
+      <div class="category-header">
+        <div class="category-icon">🧀</div>
+        <div class="category-title">Paneer Specials</div>
+        <span class="category-count">4 items</span>
+      </div>
+      <div class="items-grid">
+        <div class="item-card">
+          <img class="item-img" src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=200&q=80" alt="Mutter Paneer">
+          <div class="item-info">
+            <div class="item-badges"><span class="badge badge-jain">Jain ✓</span><span class="badge badge-popular">Popular</span></div>
+            <div class="item-name">Mutter Paneer</div>
+            <div class="item-desc">Classic North Indian curry with tender green peas and soft paneer in rich spiced tomato gravy. ~400 gms</div>
+            <div class="item-footer">
+              <div><div class="item-price">₹225</div><div class="item-size">500 ml container</div></div>
+              <button class="order-btn" onclick="orderItem('Mutter Paneer', 225)">Add +</button>
+            </div>
+          </div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=80" alt="Paneer Bhurji">
+          <div class="item-info">
+            <div class="item-badges"><span class="badge badge-jain">Jain ✓</span></div>
+            <div class="item-name">Paneer Bhurji</div>
+            <div class="item-desc">Flavorful stir-fry with crumbled paneer, onions, tomatoes and green chilies. Protein-rich homestyle meal. ~400 gms</div>
+            <div class="item-footer">
+              <div><div class="item-price">₹250</div><div class="item-size">500 ml container</div></div>
+              <button class="order-btn" onclick="orderItem('Paneer Bhurji', 250)">Add +</button>
+            </div>
+          </div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="Paneer Masala">
+          <div class="item-info">
+            <div class="item-badges"><span class="badge badge-jain">Jain ✓</span></div>
+            <div class="item-name">Paneer Masala</div>
+            <div class="item-desc">Soft paneer cubes in a bold, spiced masala gravy — a timeless classic.</div>
+            <div class="item-footer">
+              <div><div class="item-price">₹230</div><div class="item-size">500 ml container</div></div>
+              <button class="order-btn" onclick="orderItem('Paneer Masala', 230)">Add +</button>
+            </div>
+          </div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="Shahi Paneer">
+          <div class="item-info">
+            <div class="item-badges"><span class="badge badge-jain">Jain ✓</span><span class="badge badge-new">New</span></div>
+            <div class="item-name">Shahi Paneer</div>
+            <div class="item-desc">Royal rich gravy with cashews and cream — a luxurious treat for paneer lovers.</div>
+            <div class="item-footer">
+              <div><div class="item-price">₹260</div><div class="item-size">500 ml container</div></div>
+              <button class="order-btn" onclick="orderItem('Shahi Paneer', 260)">Add +</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORY 2: PUNJABI VEG CLASSIC -->
+    <div class="category" data-category="punjabi">
+      <div class="category-header">
+        <div class="category-icon">🍛</div>
+        <div class="category-title">Punjabi Veg Classic</div>
+        <span class="category-count">4 items</span>
+        <span class="category-timing">9:30 AM – 10:00 PM</span>
+      </div>
+      <div class="items-grid">
+        <div class="item-card">
+          <img class="item-img" src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="Veg Kolhapuri">
+          <div class="item-info">
+            <div class="item-badges"><span class="badge badge-spicy">🌶 Spicy</span><span class="badge badge-jain">Jain ✓</span></div>
+            <div class="item-name">Veg Kolhapuri</div>
+            <div class="item-desc">Spicy aromatic curry with seasonal vegetables in vibrant Kolhapuri spices. ~350 gms</div>
+            <div class="item-footer">
+              <div><div class="item-price">₹200</div><div class="item-size">500 ml container</div></div>
+              <button class="order-btn" onclick="orderItem('Veg Kolhapuri', 200)">Add +</button>
+            </div>
+          </div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="Veg Kadhai">
+          <div class="item-info">
+            <div class="item-badges"><span class="badge badge-jain">Jain ✓</span><span class="badge badge-popular">Popular</span></div>
+            <div class="item-name">Veg Kadhai</div>
+            <div class="item-desc">Jain-friendly curry without onion and garlic — vegetables in rich spiced tomato gravy. ~350 gms</div>
+            <div class="item-footer">
+              <div><div class="item-price">₹200</div><div class="item-size">500 ml container</div></div>
+              <button class="order-btn" onclick="orderItem('Veg Kadhai', 200)">Add +</button>
+            </div>
+          </div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=200&q=80" alt="Veg Toofani">
+          <div class="item-info">
+            <div class="item-badges"><span class="badge badge-spicy">🌶 Spicy</span><span class="badge badge-jain">Jain ✓</span></div>
+            <div class="item-name">Veg Toofani</div>
+            <div class="item-desc">Bold and fiery — sautéed seasonal vegetables in rich spicy gravy with a toofani twist. ~350 gms</div>
+            <div class="item-footer">
+              <div><div class="item-price">₹200</div><div class="item-size">500 ml container</div></div>
+              <button class="order-btn" onclick="orderItem('Veg Toofani', 200)">Add +</button>
+            </div>
+          </div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="Veg Handi">
+          <div class="item-info">
+            <div class="item-badges"><span class="badge badge-jain">Jain ✓</span></div>
+            <div class="item-name">Veg Handi</div>
+            <div class="item-desc">Seasonal vegetables simmered in rich spiced gravy in traditional Handi style. ~350 gms</div>
+            <div class="item-footer">
+              <div><div class="item-price">₹200</div><div class="item-size">500 ml container</div></div>
+              <button class="order-btn" onclick="orderItem('Veg Handi', 200)">Add +</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORY 3: THALI & COMBO -->
+    <div class="category" data-category="thali">
+      <div class="category-header">
+        <div class="category-icon">🍱</div>
+        <div class="category-title">Thali & Combos</div>
+        <span class="category-count">2 items</span>
+      </div>
+      <div class="items-grid">
+        <div class="item-card">
+          <img class="item-img" src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="Punjabi Veg Thali">
+          <div class="item-info">
+            <div class="item-badges"><span class="badge badge-popular">Best Value</span><span class="badge badge-jain">Jain ✓</span></div>
+            <div class="item-name">Punjabi Veg Thali</div>
+            <div class="item-desc">Complete meal — dal, sabzi, roti, steamed rice, pickle and dessert. The ultimate satisfying thali!</div>
+            <div class="item-footer">
+              <div><div class="item-price">₹200</div><div class="item-size">Full meal</div></div>
+              <button class="order-btn" onclick="orderItem('Punjabi Veg Thali', 200)">Add +</button>
+            </div>
+          </div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="Mini Thali">
+          <div class="item-info">
+            <div class="item-badges"><span class="badge badge-new">New</span></div>
+            <div class="item-name">Mini Thali</div>
+            <div class="item-desc">Perfect for one — smaller portion of our classic thali with dal, sabzi and roti.</div>
+            <div class="item-footer">
+              <div><div class="item-price">₹150</div><div class="item-size">Half portion</div></div>
+              <button class="order-btn" onclick="orderItem('Mini Thali', 150)">Add +</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ADD ITEM BUTTON -->
+<a class="add-item-btn" onclick="openModal()" title="Add new menu item">+</a>
+
+<!-- WHATSAPP BAR -->
+<div class="whatsapp-bar">
   <div>
-    <div class="section-tag">Our Story</div>
-    <h2 class="section-title">About <em>Tipsy Topsy</em></h2>
-    <p class="about-text">At Tipsy Topsy, we believe food is more than just nourishment — it is an experience. Every dish is crafted fresh daily using hand-picked ingredients and traditional recipes passed down through generations.</p>
-    <p class="about-text">Located at <strong>E-51-52-53, Kanaknidhi Shopping Complex, Surat</strong>, we are proud to serve the people of Surat with authentic North Indian flavours. Jain options available on all dishes.</p>
-    <div class="about-chips">
-      <span class="chip">🍽 Dine In</span>
-      <span class="chip">📦 Takeaway</span>
-      <span class="chip">🚚 Home Delivery</span>
-      <span class="chip">🌿 Jain Options</span>
-      <span class="chip">👨‍👩‍👧 Family Friendly</span>
+    <div class="wa-text">Order on WhatsApp</div>
+    <div class="wa-sub">Tap to send your order directly to us</div>
+  </div>
+  <a href="https://wa.me/918200808880" class="wa-btn" id="waOrderBtn">Order Now 💬</a>
+</div>
+
+<!-- ADD ITEM MODAL -->
+<div class="modal" id="addModal">
+  <div class="modal-box">
+    <div class="modal-title">Add New Menu Item</div>
+    <div class="form-group">
+      <label class="form-label">Dish Name *</label>
+      <input type="text" class="form-input" id="newName" placeholder="e.g. Palak Paneer">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Description</label>
+      <input type="text" class="form-input" id="newDesc" placeholder="Short description of the dish">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Price (₹) *</label>
+        <input type="number" class="form-input" id="newPrice" placeholder="200">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Category</label>
+        <select class="form-select" id="newCategory">
+          <option>Paneer Specials</option>
+          <option>Punjabi Veg Classic</option>
+          <option>Thali & Combos</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Tags</label>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;">
+        <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" id="tagJain"> Jain</label>
+        <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" id="tagSpicy"> Spicy</label>
+        <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" id="tagNew"> New</label>
+        <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" id="tagPop"> Popular</label>
+      </div>
+    </div>
+    <div class="modal-btns">
+      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+      <button class="btn-submit" onclick="submitItem()">Add to Menu ✓</button>
     </div>
   </div>
 </div>
-</section>
 
-<section class="menu-section" id="menu">
-  <div class="section-header">
-    <div class="section-tag">Our Specialties</div>
-    <h2 class="section-title">The <em>Tipsy Topsy</em> Menu</h2>
-    <p style="color:#999;font-size:16px;">Fresh, authentic and made with love — every single day</p>
-  </div>
-  <div class="menu-grid">
-    <div class="menu-card">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=500&q=80" alt="Mutter Paneer">
-        <span class="menu-badge badge-chef">Chef's Pick</span>
-      </div>
-      <div class="menu-body">
-        <h3>Mutter Paneer</h3>
-        <p>Classic North Indian curry with tender green peas and soft paneer in rich spiced tomato gravy. Available in Jain.</p>
-        <div class="menu-footer"><span class="price">₹225</span><button class="order-btn">Order Now</button></div>
-      </div>
-    </div>
-    <div class="menu-card">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&q=80" alt="Paneer Bhurji">
-        <span class="menu-badge badge-pop">Popular</span>
-      </div>
-      <div class="menu-body">
-        <h3>Paneer Bhurji</h3>
-        <p>Flavorful Indian stir-fry with crumbled paneer, onions, tomatoes and green chilies. Protein-rich homestyle meal.</p>
-        <div class="menu-footer"><span class="price">₹250</span><button class="order-btn">Order Now</button></div>
-      </div>
-    </div>
-    <div class="menu-card">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=500&q=80" alt="Veg Kolhapuri">
-        <span class="menu-badge badge-chef">Spicy</span>
-      </div>
-      <div class="menu-body">
-        <h3>Veg Kolhapuri</h3>
-        <p>Spicy aromatic curry with seasonal vegetables in vibrant Kolhapuri spices. A fiery delight for spice lovers.</p>
-        <div class="menu-footer"><span class="price">₹200</span><button class="order-btn">Order Now</button></div>
-      </div>
-    </div>
-    <div class="menu-card">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500&q=80" alt="Veg Kadhai">
-        <span class="menu-badge badge-jain">Jain</span>
-      </div>
-      <div class="menu-body">
-        <h3>Veg Kadhai</h3>
-        <p>Jain-friendly curry without onion and garlic — fresh vegetables in rich spiced tomato gravy. Kadai-style taste.</p>
-        <div class="menu-footer"><span class="price">₹200</span><button class="order-btn">Order Now</button></div>
-      </div>
-    </div>
-    <div class="menu-card">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=500&q=80" alt="Veg Thali">
-        <span class="menu-badge badge-val">Best Value</span>
-      </div>
-      <div class="menu-body">
-        <h3>Punjabi Veg Thali</h3>
-        <p>Complete traditional meal — dal, sabzi, roti, rice, pickle and dessert. The ultimate satisfying Gujarati thali.</p>
-        <div class="menu-footer"><span class="price">₹200</span><button class="order-btn">Order Now</button></div>
-      </div>
-    </div>
-    <div class="menu-card">
-      <div class="menu-img">
-        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=80" alt="Veg Handi">
-      </div>
-      <div class="menu-body">
-        <h3>Veg Handi</h3>
-        <p>Seasonal vegetables simmered in rich spiced gravy, prepared in traditional Handi style for deep authentic flavour.</p>
-        <div class="menu-footer"><span class="price">₹200</span><button class="order-btn">Order Now</button></div>
-      </div>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:40px;">
-    <!-- ✅ UPDATED: Links to menu.html -->
-    <a href="menu.html" class="btn-primary" style="display:inline-flex;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      View Full Menu — All 14 Items
-    </a>
-  </div>
-</section>
+<script>
+// Cart system
+var cart = [];
 
-<section class="reviews" id="reviews">
-  <div class="section-header">
-    <div class="section-tag">Customer Love</div>
-    <h2 class="section-title">What Our <em>Guests</em> Say</h2>
-    <p style="color:#999;font-size:16px;">Real reviews from real customers in Surat</p>
-  </div>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"The Paneer Bhurji here is absolutely outstanding! So fresh and flavourful. The Jain options are also great — my whole family loves this place!"</p>
-      <div class="reviewer">
-        <div class="reviewer-avatar">R</div>
-        <div><div class="reviewer-name">Rahul Mehta</div><div class="reviewer-loc">Adajan, Surat</div></div>
-      </div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Best Veg Kolhapuri in the entire city! The spices are authentic and the portions are generous. Takeaway packaging is also very neat. Highly recommend!"</p>
-      <div class="reviewer">
-        <div class="reviewer-avatar">P</div>
-        <div><div class="reviewer-name">Priya Shah</div><div class="reviewer-loc">Nanpura, Surat</div></div>
-      </div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"The Punjabi Thali at ₹200 is an absolute steal! Dal, sabzi, roti, rice everything is freshly made. We order from Tipsy Topsy every week!"</p>
-      <div class="reviewer">
-        <div class="reviewer-avatar">M</div>
-        <div><div class="reviewer-name">Mehul Desai</div><div class="reviewer-loc">Timiliyawad, Surat</div></div>
-      </div>
-    </div>
-  </div>
-</section>
+function orderItem(name, price) {
+  cart.push({name, price});
+  var total = cart.reduce(function(s,i){return s+i.price;},0);
+  var msg = cart.map(function(i){return i.name+' (Rs.'+i.price+')'}).join(', ');
+  var wa = 'https://wa.me/918200808880?text=' + encodeURIComponent('Hi! I want to order from Chamunda Tea:\n\n' + msg + '\n\nTotal: Rs.' + total + '\n\nName:\nAddress:\nPhone:');
+  document.getElementById('waOrderBtn').href = wa;
+  showToast(name + ' added! Total: Rs.' + total);
+}
 
-<section class="contact" id="contact">
-  <div class="contact-inner">
-    <div>
-      <h2>Visit <em>Tipsy Topsy</em> Today</h2>
-      <p class="contact-sub">Open 7 days a week. Dine in, takeaway or WhatsApp your order. We deliver fresh to your door!</p>
-      <div class="contact-btns">
-        <a href="tel:9374512344" class="btn-call">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.39 2.18 2 2 0 012.37 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.7 7.56a16 16 0 006.74 6.74l1.92-1.92a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-          Call: +91 9374512344
-        </a>
-        <a href="https://wa.me/919374512344" class="btn-wa">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          WhatsApp: +91 9374512344
-        </a>
-      </div>
-    </div>
-    <div class="info-list">
-      <div class="info-item">
-        <div class="info-icon">📍</div>
-        <div><div class="info-title">Our Location</div><div class="info-val">E-51-52-53, Kanaknidhi Shopping Complex, Surat</div></div>
-      </div>
-      <div class="info-item">
-        <div class="info-icon">📞</div>
-        <div><div class="info-title">Phone & WhatsApp</div><div class="info-val">+91 9374512344</div></div>
-      </div>
-      <div class="info-item">
-        <div class="info-icon">🕐</div>
-        <div><div class="info-title">Dine In Hours</div><div class="info-val">Monday – Sunday: 11:00 AM – 10:00 PM</div></div>
-      </div>
-      <div class="info-item">
-        <div class="info-icon">📦</div>
-        <div><div class="info-title">Punjabi Veg Classic</div><div class="info-val">Takeaway: 9:30 AM – 10:00 PM Daily</div></div>
-      </div>
-    </div>
-  </div>
-</section>
+function showToast(msg) {
+  var t = document.createElement('div');
+  t.style.cssText = 'position:fixed;top:90px;right:20px;background:#1a1a1a;color:white;padding:12px 20px;border-radius:10px;font-size:14px;font-weight:600;z-index:9999;transition:opacity .3s;';
+  t.textContent = '✓ ' + msg;
+  document.body.appendChild(t);
+  setTimeout(function(){t.style.opacity='0';setTimeout(function(){t.remove();},300);},2000);
+}
 
-<footer>
-  <div class="footer-brand">
-    <div class="footer-logo">Tipsy Topsy</div>
-  </div>
-  <div class="footer-text">© 2024 Tipsy Topsy. All rights reserved. | Surat, Gujarat, India</div>
-</footer>
+function filterItems() {
+  var q = document.getElementById('searchInput').value.toLowerCase();
+  document.querySelectorAll('.item-card').forEach(function(c){
+    c.style.display = c.innerText.toLowerCase().includes(q) ? '' : 'none';
+  });
+}
+
+function openModal(){document.getElementById('addModal').classList.add('open');}
+function closeModal(){document.getElementById('addModal').classList.remove('open');}
+
+function submitItem() {
+  var n = document.getElementById('newName').value.trim();
+  var d = document.getElementById('newDesc').value.trim();
+  var p = document.getElementById('newPrice').value.trim();
+  var cat = document.getElementById('newCategory').value;
+  if(!n || !p){showToast('Please enter dish name and price!');return;}
+  
+  var badges = '';
+  if(document.getElementById('tagJain').checked) badges += '<span class="badge badge-jain">Jain ✓</span>';
+  if(document.getElementById('tagSpicy').checked) badges += '<span class="badge badge-spicy">🌶 Spicy</span>';
+  if(document.getElementById('tagNew').checked) badges += '<span class="badge badge-new">New</span>';
+  if(document.getElementById('tagPop').checked) badges += '<span class="badge badge-popular">Popular</span>';
+  
+  var card = '<div class="item-card"><img class="item-img" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="'+n+'"><div class="item-info"><div class="item-badges">'+badges+'</div><div class="item-name">'+n+'</div><div class="item-desc">'+(d||'Freshly prepared with love.')+'</div><div class="item-footer"><div><div class="item-price">₹'+p+'</div></div><button class="order-btn" onclick="orderItem(''+n+'','+p+')">Add +</button></div></div></div>';
+  
+  var grids = document.querySelectorAll('.items-grid');
+  grids[grids.length-1].insertAdjacentHTML('beforeend', card);
+  closeModal();
+  showToast(n + ' added to menu!');
+  
+  document.getElementById('newName').value='';
+  document.getElementById('newDesc').value='';
+  document.getElementById('newPrice').value='';
+  document.getElementById('tagJain').checked=false;
+  document.getElementById('tagSpicy').checked=false;
+  document.getElementById('tagNew').checked=false;
+  document.getElementById('tagPop').checked=false;
+}
+</script>
 
 </body>
 </html>
