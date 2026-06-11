@@ -3,373 +3,512 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chamunda Tea — Full Menu</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Tipsy Topsy — Full Menu</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--red:#C8102E;--red-dark:#A50E26;--red-light:#FDECEA;--bg:#FFFAF8;--fg:#2C0A0A;--muted:#F5EDE8;--border:#F5C6B8;--white:#FFFFFF;}
+:root{
+--brand:#C8102E;
+--brand-dark:#A00D24;
+--brand-light:#FFF0F2;
+--gold:#D4A84B;
+--bg:#FAFAF8;
+--surface:#FFFFFF;
+--fg:#1A0A0A;
+--muted:#F7F0EE;
+--border:#EDD5CC;
+--text-muted:#9A8080;
+--shadow-sm:0 2px 8px rgba(200,16,46,0.06);
+--shadow-md:0 8px 24px rgba(200,16,46,0.10);
+--shadow-lg:0 20px 50px rgba(200,16,46,0.14);
+--radius:16px;
+--radius-sm:10px;
+}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Karla',sans-serif;background:var(--bg);color:var(--fg);}
-nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);padding:0 60px;height:70px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 0 var(--border);z-index:1000;}
-.logo{font-family:'Playfair Display SC',serif;font-size:20px;font-weight:700;color:var(--fg);}
-.logo span{color:var(--red);}
-.back-btn{background:var(--red);color:white;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;}
-.hero{background:var(--red);color:white;padding:110px 60px 60px;text-align:center;}
-.hero h1{font-family:'Playfair Display SC',serif;font-size:48px;font-weight:700;margin-bottom:12px;}
-.hero h1 em{font-style:normal;color:#FFD700;}
-.hero p{font-size:17px;opacity:0.85;margin-bottom:24px;}
-.jain-note{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);padding:8px 20px;border-radius:50px;font-size:13px;font-weight:600;}
-.menu-page{max-width:1200px;margin:0 auto;padding:60px 40px;}
-.search-bar{background:white;border-radius:16px;padding:20px 24px;margin-bottom:48px;display:flex;gap:14px;box-shadow:0 4px 20px rgba(200,16,46,0.08);border:1px solid var(--border);}
-.search-bar input{flex:1;border:none;outline:none;font-size:16px;font-family:'Karla',sans-serif;color:var(--fg);background:transparent;}
-.search-bar input::placeholder{color:#bbb;}
-.search-icon{color:var(--red);font-size:20px;}
-.category{margin-bottom:52px;}
-.category-header{display:flex;align-items:center;gap:16px;margin-bottom:28px;padding-bottom:16px;border-bottom:2px solid var(--border);}
-.category-icon{width:44px;height:44px;background:var(--red);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;flex-shrink:0;}
-.category-title{font-family:'Playfair Display SC',serif;font-size:28px;font-weight:700;color:var(--fg);}
-.category-count{background:var(--red-light);color:var(--red);padding:4px 12px;border-radius:50px;font-size:12px;font-weight:700;}
-.category-timing{font-size:13px;color:#999;margin-left:auto;}
-.items-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-.item-card{background:white;border-radius:16px;padding:20px;display:flex;gap:16px;border:1px solid var(--border);transition:all .3s;cursor:pointer;}
-.item-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(200,16,46,0.12);border-color:var(--red);}
-.item-img{width:90px;height:90px;border-radius:12px;object-fit:cover;flex-shrink:0;}
-.item-info{flex:1;}
-.item-badges{display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap;}
-.badge{padding:3px 10px;border-radius:50px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
-.badge-jain{background:#EDE9FE;color:#7C3AED;}
-.badge-spicy{background:#FEF2F2;color:#DC2626;}
-.badge-popular{background:#FEF9C3;color:#854D0E;}
-.badge-new{background:#DCFCE7;color:#15803D;}
-.item-name{font-family:'Playfair Display SC',serif;font-size:16px;font-weight:700;color:var(--fg);margin-bottom:6px;}
-.item-desc{font-size:13px;color:#888;line-height:1.6;margin-bottom:12px;}
-.item-footer{display:flex;justify-content:space-between;align-items:center;}
-.item-price{font-family:'Playfair Display SC',serif;font-size:20px;font-weight:700;color:var(--red);}
-.item-size{font-size:12px;color:#aaa;margin-top:2px;}
-.order-btn{background:var(--red-light);color:var(--red);border:1.5px solid var(--border);padding:7px 16px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Karla',sans-serif;}
-.order-btn:hover{background:var(--red);color:white;border-color:var(--red);}
-.whatsapp-bar{position:fixed;bottom:0;width:100%;background:#16A34A;color:white;padding:16px 60px;display:flex;justify-content:space-between;align-items:center;z-index:999;}
-.wa-text{font-size:16px;font-weight:700;}
-.wa-sub{font-size:13px;opacity:0.85;}
-.wa-btn{background:white;color:#16A34A;padding:12px 28px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;}
-.add-item-btn{position:fixed;right:24px;bottom:80px;background:var(--red);color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;cursor:pointer;box-shadow:0 8px 24px rgba(200,16,46,0.4);transition:all .2s;z-index:998;text-decoration:none;}
-.add-item-btn:hover{transform:scale(1.1);}
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:2000;align-items:center;justify-content:center;}
-.modal.open{display:flex;}
-.modal-box{background:white;border-radius:24px;padding:36px;width:500px;max-width:90vw;max-height:90vh;overflow-y:auto;}
-.modal-title{font-family:'Playfair Display SC',serif;font-size:24px;font-weight:700;margin-bottom:24px;color:var(--fg);}
-.form-group{margin-bottom:18px;}
-.form-label{font-size:14px;font-weight:700;color:var(--fg);margin-bottom:8px;display:block;}
-.form-input{width:100%;border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;font-size:15px;font-family:'Karla',sans-serif;color:var(--fg);outline:none;transition:border .2s;}
-.form-input:focus{border-color:var(--red);}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.form-select{width:100%;border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;font-size:15px;font-family:'Karla',sans-serif;color:var(--fg);outline:none;background:white;}
-.modal-btns{display:flex;gap:12px;margin-top:24px;}
-.btn-submit{flex:1;background:var(--red);color:white;padding:14px;border-radius:10px;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'Karla',sans-serif;}
-.btn-cancel{background:var(--muted);color:var(--fg);padding:14px 24px;border-radius:10px;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'Karla',sans-serif;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);padding-bottom:90px;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-thumb{background:var(--brand);border-radius:3px;}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.98);backdrop-filter:blur(16px);height:68px;padding:0 56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);z-index:1000;box-shadow:0 1px 20px rgba(0,0,0,0.04);}
+.nav-brand{display:flex;align-items:center;gap:10px;}
+.nav-logo{width:36px;height:36px;background:var(--brand);border-radius:10px;display:grid;place-items:center;font-size:18px;}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--fg);letter-spacing:.3px;}
+.nav-name em{font-style:normal;color:var(--brand);}
+.back-link{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--text-muted);font-size:14px;font-weight:500;padding:8px 16px;border-radius:var(--radius-sm);border:1px solid var(--border);transition:all .2s;}
+.back-link:hover{color:var(--brand);border-color:var(--brand);}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1A0A0A 0%,var(--brand-dark) 50%,#3D0A14 100%);padding:100px 56px 56px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:400px;height:400px;background:rgba(212,168,75,0.06);border-radius:50%;}
+.hero::after{content:'';position:absolute;bottom:-80px;left:-40px;width:300px;height:300px;background:rgba(200,16,46,0.1);border-radius:50%;}
+.hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;text-align:center;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(212,168,75,0.15);border:1px solid rgba(212,168,75,0.3);color:#D4A84B;padding:6px 18px;border-radius:50px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:700;color:white;line-height:1.1;margin-bottom:14px;}
+.hero h1 em{font-style:normal;color:var(--gold);}
+.hero-sub{color:rgba(255,255,255,0.65);font-size:16px;line-height:1.7;margin-bottom:24px;}
+.hero-tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.hero-tag{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:500;}
+
+/* SEARCH + TABS */
+.sticky-bar{position:sticky;top:68px;z-index:900;background:white;border-bottom:1px solid var(--border);}
+.search-wrap{padding:14px 56px 0;}
+.search-box{display:flex;align-items:center;gap:12px;background:var(--muted);border:1.5px solid var(--border);border-radius:50px;padding:10px 20px;max-width:500px;transition:all .2s;}
+.search-box:focus-within{border-color:var(--brand);background:white;box-shadow:0 0 0 3px rgba(200,16,46,0.08);}
+.search-box input{border:none;background:transparent;outline:none;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--fg);width:100%;}
+.search-box input::placeholder{color:var(--text-muted);}
+.tabs-wrap{display:flex;gap:6px;overflow-x:auto;padding:12px 56px;scrollbar-width:none;}
+.tabs-wrap::-webkit-scrollbar{display:none;}
+.tab{white-space:nowrap;padding:7px 18px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer;border:1.5px solid var(--border);background:white;color:var(--text-muted);transition:all .2s;font-family:'DM Sans',sans-serif;}
+.tab:hover{border-color:var(--brand);color:var(--brand);}
+.tab.active{background:var(--brand);color:white;border-color:var(--brand);}
+
+/* MENU BODY */
+.menu-body{max-width:1200px;margin:0 auto;padding:48px 40px;}
+.category{margin-bottom:56px;}
+.cat-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1.5px solid var(--border);}
+.cat-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--brand),var(--brand-dark));border-radius:14px;display:grid;place-items:center;font-size:20px;flex-shrink:0;box-shadow:var(--shadow-sm);}
+.cat-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--fg);}
+.cat-badge{background:var(--brand-light);color:var(--brand);padding:3px 12px;border-radius:50px;font-size:12px;font-weight:600;}
+.cat-timing{margin-left:auto;font-size:12px;color:var(--text-muted);background:var(--muted);padding:4px 12px;border-radius:50px;}
+
+/* ITEM GRID */
+.items-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.item{background:var(--surface);border-radius:var(--radius);padding:18px;display:flex;gap:14px;border:1px solid var(--border);transition:all .25s;cursor:pointer;position:relative;}
+.item:hover{border-color:var(--brand);box-shadow:var(--shadow-md);transform:translateY(-2px);}
+.item-img-wrap{width:88px;height:88px;border-radius:12px;overflow:hidden;flex-shrink:0;background:var(--muted);}
+.item-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.item:hover .item-img-wrap img{transform:scale(1.06);}
+.item-content{flex:1;min-width:0;}
+.item-tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px;}
+.tag{display:inline-block;padding:2px 8px;border-radius:50px;font-size:10px;font-weight:700;letter-spacing:.3px;}
+.tag-jain{background:#EDE9FE;color:#6D28D9;}
+.tag-spicy{background:#FEF2F2;color:#DC2626;}
+.tag-pop{background:#FFFBEB;color:#92400E;}
+.tag-new{background:#ECFDF5;color:#065F46;}
+.tag-best{background:#EFF6FF;color:#1D4ED8;}
+.item-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:var(--fg);margin-bottom:4px;line-height:1.3;}
+.item-desc{font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:12px;}
+.item-bottom{display:flex;align-items:center;justify-content:space-between;}
+.item-price{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--brand);}
+.item-size{font-size:11px;color:var(--text-muted);}
+.add-btn{background:var(--brand-light);color:var(--brand);border:1.5px solid rgba(200,16,46,0.2);padding:7px 16px;border-radius:var(--radius-sm);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.add-btn:hover{background:var(--brand);color:white;border-color:var(--brand);transform:scale(1.04);}
+.add-btn.added{background:var(--brand);color:white;border-color:var(--brand);}
+
+/* CART BAR */
+.cart-bar{position:fixed;bottom:-80px;left:0;right:0;background:#1A0A0A;color:white;padding:14px 56px;display:flex;align-items:center;justify-content:space-between;z-index:998;transition:bottom .3s;box-shadow:0 -4px 20px rgba(0,0,0,0.2);}
+.cart-bar.show{bottom:0;}
+.cart-left{display:flex;align-items:center;gap:14px;}
+.cart-pill{background:var(--brand);color:white;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:700;}
+.cart-label{font-size:14px;font-weight:600;}
+.cart-sub{font-size:12px;color:rgba(255,255,255,0.6);}
+.cart-right{display:flex;gap:10px;}
+.btn-clear{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);padding:9px 16px;border-radius:var(--radius-sm);font-size:13px;font-weight:600;cursor:pointer;border:1px solid rgba(255,255,255,0.1);font-family:'DM Sans',sans-serif;transition:all .2s;}
+.btn-clear:hover{background:rgba(255,255,255,0.15);}
+.btn-order{background:#16A34A;color:white;padding:9px 20px;border-radius:var(--radius-sm);font-size:13px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:6px;transition:all .2s;}
+.btn-order:hover{background:#15803D;}
+
+/* FAB */
+.fab{position:fixed;right:28px;bottom:90px;width:52px;height:52px;background:var(--brand);color:white;border-radius:50%;border:none;font-size:26px;cursor:pointer;box-shadow:0 8px 24px rgba(200,16,46,0.4);z-index:997;display:grid;place-items:center;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.fab:hover{transform:scale(1.08);background:var(--brand-dark);}
+
+/* MODAL */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:2000;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+.overlay.open{display:flex;}
+.modal{background:white;border-radius:24px;padding:36px;width:500px;max-width:94vw;box-shadow:0 30px 80px rgba(0,0,0,0.2);}
+.modal-head{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;margin-bottom:24px;color:var(--fg);}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--fg);}
+.field input,.field select,.field textarea{width:100%;border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:11px 14px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--fg);outline:none;background:var(--bg);transition:border .2s;}
+.field input:focus,.field select:focus{border-color:var(--brand);background:white;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.check-row{display:flex;gap:18px;flex-wrap:wrap;margin-top:4px;}
+.check-label{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;cursor:pointer;}
+.modal-actions{display:flex;gap:10px;margin-top:24px;}
+.btn-cancel{background:var(--muted);color:var(--fg);padding:12px 20px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.btn-save{flex:1;background:var(--brand);color:white;padding:12px;border-radius:var(--radius-sm);font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;}
+.btn-save:hover{background:var(--brand-dark);}
+
+/* TOAST */
+.toast{position:fixed;top:80px;right:24px;background:#1A0A0A;color:white;padding:12px 20px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;z-index:9999;opacity:0;transform:translateY(-8px);transition:all .3s;pointer-events:none;}
+.toast.show{opacity:1;transform:translateY(0);}
+
+/* EMPTY */
+.empty{text-align:center;padding:60px 20px;color:var(--text-muted);}
+.empty-icon{font-size:48px;margin-bottom:12px;}
+
+/* RESPONSIVE */
 @media(max-width:768px){
-nav{padding:0 20px;}
-.hero{padding:90px 20px 40px;}
-.hero h1{font-size:32px;}
-.menu-page{padding:40px 20px 100px;}
+nav{padding:0 18px;}
+.hero{padding:90px 20px 44px;}
+.hero h1{font-size:36px;}
+.sticky-bar .search-wrap{padding:12px 18px 0;}
+.tabs-wrap{padding:10px 18px;}
+.menu-body{padding:36px 16px 100px;}
 .items-grid{grid-template-columns:1fr;}
-.whatsapp-bar{padding:14px 20px;}
-.search-bar{padding:14px 18px;}
+.cart-bar{padding:12px 18px;}
+.fab{right:18px;bottom:84px;}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">Chamunda <span>Tea</span></div>
-  <a href="index.html" class="back-btn">← Back to Website</a>
+  <div class="nav-brand">
+    <div class="nav-logo">🍽</div>
+    <div class="nav-name">Tipsy <em>Topsy</em></div>
+  </div>
+  <a href="index.html" class="back-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to Website
+  </a>
 </nav>
 
 <div class="hero">
-  <h1>Our <em>Full Menu</em></h1>
-  <p>Fresh, authentic Indian food made with love — available for dine in, takeaway and delivery</p>
-  <div class="jain-note">🌿 Jain options available on all dishes — just ask!</div>
-</div>
-
-<div class="menu-page">
-  <div class="search-bar">
-    <span class="search-icon">🔍</span>
-    <input type="text" id="searchInput" placeholder="Search for dishes, categories..." oninput="filterItems()">
-  </div>
-
-  <div id="menuContainer">
-
-    <!-- CATEGORY 1: PANEER SPECIALS -->
-    <div class="category" data-category="paneer">
-      <div class="category-header">
-        <div class="category-icon">🧀</div>
-        <div class="category-title">Paneer Specials</div>
-        <span class="category-count">4 items</span>
-      </div>
-      <div class="items-grid">
-        <div class="item-card">
-          <img class="item-img" src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=200&q=80" alt="Mutter Paneer">
-          <div class="item-info">
-            <div class="item-badges"><span class="badge badge-jain">Jain ✓</span><span class="badge badge-popular">Popular</span></div>
-            <div class="item-name">Mutter Paneer</div>
-            <div class="item-desc">Classic North Indian curry with tender green peas and soft paneer in rich spiced tomato gravy. ~400 gms</div>
-            <div class="item-footer">
-              <div><div class="item-price">₹225</div><div class="item-size">500 ml container</div></div>
-              <button class="order-btn" onclick="orderItem('Mutter Paneer', 225)">Add +</button>
-            </div>
-          </div>
-        </div>
-        <div class="item-card">
-          <img class="item-img" src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=80" alt="Paneer Bhurji">
-          <div class="item-info">
-            <div class="item-badges"><span class="badge badge-jain">Jain ✓</span></div>
-            <div class="item-name">Paneer Bhurji</div>
-            <div class="item-desc">Flavorful stir-fry with crumbled paneer, onions, tomatoes and green chilies. Protein-rich homestyle meal. ~400 gms</div>
-            <div class="item-footer">
-              <div><div class="item-price">₹250</div><div class="item-size">500 ml container</div></div>
-              <button class="order-btn" onclick="orderItem('Paneer Bhurji', 250)">Add +</button>
-            </div>
-          </div>
-        </div>
-        <div class="item-card">
-          <img class="item-img" src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="Paneer Masala">
-          <div class="item-info">
-            <div class="item-badges"><span class="badge badge-jain">Jain ✓</span></div>
-            <div class="item-name">Paneer Masala</div>
-            <div class="item-desc">Soft paneer cubes in a bold, spiced masala gravy — a timeless classic.</div>
-            <div class="item-footer">
-              <div><div class="item-price">₹230</div><div class="item-size">500 ml container</div></div>
-              <button class="order-btn" onclick="orderItem('Paneer Masala', 230)">Add +</button>
-            </div>
-          </div>
-        </div>
-        <div class="item-card">
-          <img class="item-img" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="Shahi Paneer">
-          <div class="item-info">
-            <div class="item-badges"><span class="badge badge-jain">Jain ✓</span><span class="badge badge-new">New</span></div>
-            <div class="item-name">Shahi Paneer</div>
-            <div class="item-desc">Royal rich gravy with cashews and cream — a luxurious treat for paneer lovers.</div>
-            <div class="item-footer">
-              <div><div class="item-price">₹260</div><div class="item-size">500 ml container</div></div>
-              <button class="order-btn" onclick="orderItem('Shahi Paneer', 260)">Add +</button>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Surat's Favourite Restaurant
     </div>
-
-    <!-- CATEGORY 2: PUNJABI VEG CLASSIC -->
-    <div class="category" data-category="punjabi">
-      <div class="category-header">
-        <div class="category-icon">🍛</div>
-        <div class="category-title">Punjabi Veg Classic</div>
-        <span class="category-count">4 items</span>
-        <span class="category-timing">9:30 AM – 10:00 PM</span>
-      </div>
-      <div class="items-grid">
-        <div class="item-card">
-          <img class="item-img" src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="Veg Kolhapuri">
-          <div class="item-info">
-            <div class="item-badges"><span class="badge badge-spicy">🌶 Spicy</span><span class="badge badge-jain">Jain ✓</span></div>
-            <div class="item-name">Veg Kolhapuri</div>
-            <div class="item-desc">Spicy aromatic curry with seasonal vegetables in vibrant Kolhapuri spices. ~350 gms</div>
-            <div class="item-footer">
-              <div><div class="item-price">₹200</div><div class="item-size">500 ml container</div></div>
-              <button class="order-btn" onclick="orderItem('Veg Kolhapuri', 200)">Add +</button>
-            </div>
-          </div>
-        </div>
-        <div class="item-card">
-          <img class="item-img" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="Veg Kadhai">
-          <div class="item-info">
-            <div class="item-badges"><span class="badge badge-jain">Jain ✓</span><span class="badge badge-popular">Popular</span></div>
-            <div class="item-name">Veg Kadhai</div>
-            <div class="item-desc">Jain-friendly curry without onion and garlic — vegetables in rich spiced tomato gravy. ~350 gms</div>
-            <div class="item-footer">
-              <div><div class="item-price">₹200</div><div class="item-size">500 ml container</div></div>
-              <button class="order-btn" onclick="orderItem('Veg Kadhai', 200)">Add +</button>
-            </div>
-          </div>
-        </div>
-        <div class="item-card">
-          <img class="item-img" src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=200&q=80" alt="Veg Toofani">
-          <div class="item-info">
-            <div class="item-badges"><span class="badge badge-spicy">🌶 Spicy</span><span class="badge badge-jain">Jain ✓</span></div>
-            <div class="item-name">Veg Toofani</div>
-            <div class="item-desc">Bold and fiery — sautéed seasonal vegetables in rich spicy gravy with a toofani twist. ~350 gms</div>
-            <div class="item-footer">
-              <div><div class="item-price">₹200</div><div class="item-size">500 ml container</div></div>
-              <button class="order-btn" onclick="orderItem('Veg Toofani', 200)">Add +</button>
-            </div>
-          </div>
-        </div>
-        <div class="item-card">
-          <img class="item-img" src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="Veg Handi">
-          <div class="item-info">
-            <div class="item-badges"><span class="badge badge-jain">Jain ✓</span></div>
-            <div class="item-name">Veg Handi</div>
-            <div class="item-desc">Seasonal vegetables simmered in rich spiced gravy in traditional Handi style. ~350 gms</div>
-            <div class="item-footer">
-              <div><div class="item-price">₹200</div><div class="item-size">500 ml container</div></div>
-              <button class="order-btn" onclick="orderItem('Veg Handi', 200)">Add +</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <h1>Our <em>Complete</em> Menu</h1>
+    <p class="hero-sub">50+ fresh dishes — combos, Indian curries, Chinese, snacks and more. Made fresh daily with love.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">🌿 Jain Options Available</span>
+      <span class="hero-tag">📦 Takeaway & Delivery</span>
+      <span class="hero-tag">⏰ 9:30 AM – 10:00 PM</span>
     </div>
-
-    <!-- CATEGORY 3: THALI & COMBO -->
-    <div class="category" data-category="thali">
-      <div class="category-header">
-        <div class="category-icon">🍱</div>
-        <div class="category-title">Thali & Combos</div>
-        <span class="category-count">2 items</span>
-      </div>
-      <div class="items-grid">
-        <div class="item-card">
-          <img class="item-img" src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="Punjabi Veg Thali">
-          <div class="item-info">
-            <div class="item-badges"><span class="badge badge-popular">Best Value</span><span class="badge badge-jain">Jain ✓</span></div>
-            <div class="item-name">Punjabi Veg Thali</div>
-            <div class="item-desc">Complete meal — dal, sabzi, roti, steamed rice, pickle and dessert. The ultimate satisfying thali!</div>
-            <div class="item-footer">
-              <div><div class="item-price">₹200</div><div class="item-size">Full meal</div></div>
-              <button class="order-btn" onclick="orderItem('Punjabi Veg Thali', 200)">Add +</button>
-            </div>
-          </div>
-        </div>
-        <div class="item-card">
-          <img class="item-img" src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="Mini Thali">
-          <div class="item-info">
-            <div class="item-badges"><span class="badge badge-new">New</span></div>
-            <div class="item-name">Mini Thali</div>
-            <div class="item-desc">Perfect for one — smaller portion of our classic thali with dal, sabzi and roti.</div>
-            <div class="item-footer">
-              <div><div class="item-price">₹150</div><div class="item-size">Half portion</div></div>
-              <button class="order-btn" onclick="orderItem('Mini Thali', 150)">Add +</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
 
-<!-- ADD ITEM BUTTON -->
-<a class="add-item-btn" onclick="openModal()" title="Add new menu item">+</a>
-
-<!-- WHATSAPP BAR -->
-<div class="whatsapp-bar">
-  <div>
-    <div class="wa-text">Order on WhatsApp</div>
-    <div class="wa-sub">Tap to send your order directly to us</div>
+<div class="sticky-bar">
+  <div class="search-wrap">
+    <div class="search-box">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A8080" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Search dishes, categories...">
+    </div>
   </div>
-  <a href="https://wa.me/918200808880" class="wa-btn" id="waOrderBtn">Order Now 💬</a>
+  <div class="tabs-wrap" id="tabsWrap">
+    <button class="tab active" data-target="combo">🍱 Combos</button>
+    <button class="tab" data-target="mini">🥡 Mini Combos</button>
+    <button class="tab" data-target="chaat">🛺 Chaat</button>
+    <button class="tab" data-target="soup">🍲 Soup</button>
+    <button class="tab" data-target="punjabi">🍛 Punjabi Veg</button>
+    <button class="tab" data-target="paneer">🧀 Paneer</button>
+    <button class="tab" data-target="dal">🫕 Dal</button>
+    <button class="tab" data-target="roti">🫓 Rotis</button>
+    <button class="tab" data-target="rice">🍚 Rice</button>
+    <button class="tab" data-target="chinese">🥢 Chinese</button>
+    <button class="tab" data-target="pavbhaji">🧈 Pav Bhaji</button>
+    <button class="tab" data-target="sides">🥗 Sides</button>
+    <button class="tab" data-target="sandwich">🥪 Sandwiches</button>
+    <button class="tab" data-target="frankies">🌯 Frankies</button>
+    <button class="tab" data-target="beverages">🥤 Drinks</button>
+  </div>
 </div>
 
-<!-- ADD ITEM MODAL -->
-<div class="modal" id="addModal">
-  <div class="modal-box">
-    <div class="modal-title">Add New Menu Item</div>
-    <div class="form-group">
-      <label class="form-label">Dish Name *</label>
-      <input type="text" class="form-input" id="newName" placeholder="e.g. Palak Paneer">
-    </div>
-    <div class="form-group">
-      <label class="form-label">Description</label>
-      <input type="text" class="form-input" id="newDesc" placeholder="Short description of the dish">
-    </div>
-    <div class="form-row">
-      <div class="form-group">
-        <label class="form-label">Price (₹) *</label>
-        <input type="number" class="form-input" id="newPrice" placeholder="200">
-      </div>
-      <div class="form-group">
-        <label class="form-label">Category</label>
-        <select class="form-select" id="newCategory">
-          <option>Paneer Specials</option>
-          <option>Punjabi Veg Classic</option>
-          <option>Thali & Combos</option>
-          <option>Other</option>
+<div class="menu-body" id="menuBody">
+
+<div class="category" id="combo">
+<div class="cat-header"><div class="cat-icon">🍱</div><div class="cat-title">Combo Meals</div><span class="cat-badge">3 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="Maharaja Meal" data-price="270"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="Maharaja Meal" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-best">Best Value</span><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Maharaja Meal</div><div class="item-desc">3 Rotis + Paneer Curry + Mixed Veg + Jeera Rice + Sweet + Namkeen + Papad + Salad + Pickle + Chhas + Mouth Freshener</div><div class="item-bottom"><div><div class="item-price">₹270</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Deluxe Thali" data-price="200"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="Deluxe Thali" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Popular</span><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Deluxe Thali</div><div class="item-desc">3 Rotis + Veg Curry + Sev Tameta + Dal + Rice + Salad + Pickle</div><div class="item-bottom"><div><div class="item-price">₹200</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Pav Bhaji Combo" data-price="250"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="Pav Bhaji Combo" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-new">New</span></div><div class="item-name">Pav Bhaji Combo</div><div class="item-desc">Butter Pav Bhaji (180g) + 3 Soft Pavs + Garlic Chutney + Garden Salad + Mouth Freshener</div><div class="item-bottom"><div><div class="item-price">₹250</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="mini">
+<div class="cat-header"><div class="cat-icon">🥡</div><div class="cat-title">Mini Combos</div><span class="cat-badge">5 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="Paneer Butter Masala Combo" data-price="190"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Popular</span></div><div class="item-name">Paneer Butter Masala Combo</div><div class="item-desc">Paneer Butter Masala + 3 Tawa Rotis + 200ml Chhas</div><div class="item-bottom"><div><div class="item-price">₹190</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Paneer Tikka Masala Combo" data-price="190"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-new">New</span></div><div class="item-name">Paneer Tikka Masala Combo</div><div class="item-desc">Paneer Tikka Masala + 3 Tawa Rotis + 200ml Chhas</div><div class="item-bottom"><div><div class="item-price">₹190</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Veg Kolhapuri Combo" data-price="180"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-spicy">🌶 Spicy</span></div><div class="item-name">Veg Kolhapuri Combo</div><div class="item-desc">Veg Kolhapuri + 3 Tawa Rotis + 200ml Chhas</div><div class="item-bottom"><div><div class="item-price">₹180</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Dal Fry Jeera Rice Combo" data-price="180"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Dal Fry + Jeera Rice Combo</div><div class="item-desc">Dal Fry + Jeera Rice + 200ml Chhas</div><div class="item-bottom"><div><div class="item-price">₹180</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Dal Makhni Rice Combo" data-price="190"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Popular</span></div><div class="item-name">Dal Makhni + Rice Combo</div><div class="item-desc">Dal Makhni + Rice + 200ml Chhas</div><div class="item-bottom"><div><div class="item-price">₹190</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="chaat">
+<div class="cat-header"><div class="cat-icon">🛺</div><div class="cat-title">Chaat Items on Wheels</div><span class="cat-badge">5 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="Pani Puri" data-price="150"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Favourite</span></div><div class="item-name">Pani Puri</div><div class="item-desc">6 Crispy Puris + Tikha Pani + Meetha Pani + Churma + Aloo-Moong Chana Masala</div><div class="item-bottom"><div><div class="item-price">₹150</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Bhel Puri" data-price="175"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"></div><div class="item-name">Bhel Puri</div><div class="item-desc">Classic Mumbai-style bhel with puffed rice and fresh chutneys</div><div class="item-bottom"><div><div class="item-price">₹175</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Sukha Bhel Puri" data-price="175"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Sukha Bhel Puri</div><div class="item-desc">Dry bhel without liquid chutneys — perfect for takeaway</div><div class="item-bottom"><div><div class="item-price">₹175</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Churma" data-price="125"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Churma</div><div class="item-desc">Traditional Gujarati sweet churma made fresh daily</div><div class="item-bottom"><div><div class="item-price">₹125</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Delhi Chaat" data-price="200"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Popular</span></div><div class="item-name">Delhi Chaat</div><div class="item-desc">Authentic Delhi-style chaat with all the classic toppings and chutneys</div><div class="item-bottom"><div><div class="item-price">₹200</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="soup">
+<div class="cat-header"><div class="cat-icon">🍲</div><div class="cat-title">Soup</div><span class="cat-badge">1 item</span></div>
+<div class="items-grid">
+<div class="item" data-name="Tomato Soup" data-price="175"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Tomato Soup</div><div class="item-desc">500ml serving with breadsticks, butter chiplet and black pepper</div><div class="item-bottom"><div><div class="item-price">₹175</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="punjabi">
+<div class="cat-header"><div class="cat-icon">🍛</div><div class="cat-title">Punjabi Veg Classic</div><span class="cat-badge">4 items</span><span class="cat-timing">9:30 AM – 10:00 PM</span></div>
+<div class="items-grid">
+<div class="item" data-name="Veg Kolhapuri" data-price="200"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-spicy">🌶 Spicy</span><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Veg Kolhapuri</div><div class="item-desc">Spicy aromatic curry with seasonal vegetables in bold Kolhapuri spices. ~350 gms</div><div class="item-bottom"><div><div class="item-price">₹200</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Veg Kadhai" data-price="200"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span><span class="tag tag-pop">Popular</span></div><div class="item-name">Veg Kadhai</div><div class="item-desc">No onion no garlic — vegetables in rich spiced tomato gravy. ~350 gms</div><div class="item-bottom"><div><div class="item-price">₹200</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Veg Toofani" data-price="200"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-spicy">🌶 Spicy</span><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Veg Toofani</div><div class="item-desc">Bold fiery fusion — sautéed vegetables in rich spicy toofani gravy. ~350 gms</div><div class="item-bottom"><div><div class="item-price">₹200</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Veg Handi" data-price="200"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Veg Handi</div><div class="item-desc">Seasonal vegetables in rich spiced gravy — traditional Handi style. ~350 gms</div><div class="item-bottom"><div><div class="item-price">₹200</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="paneer">
+<div class="cat-header"><div class="cat-icon">🧀</div><div class="cat-title">Punjabi Paneer Delights</div><span class="cat-badge">4 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="Paneer Butter Masala" data-price="225"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Chef's Pick</span><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Paneer Butter Masala</div><div class="item-desc">Soft paneer in rich creamy tomato gravy. ~400 gms, 500ml container</div><div class="item-bottom"><div><div class="item-price">₹225</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Paneer Tikka Masala" data-price="225"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Popular</span><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Paneer Tikka Masala</div><div class="item-desc">Smoky grilled paneer tikka in rich spiced masala gravy. ~400 gms</div><div class="item-bottom"><div><div class="item-price">₹225</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Mutter Paneer" data-price="225"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Mutter Paneer</div><div class="item-desc">Tender green peas and soft paneer in rich spiced tomato gravy. ~400 gms</div><div class="item-bottom"><div><div class="item-price">₹225</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Paneer Bhurji" data-price="250"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Paneer Bhurji</div><div class="item-desc">Crumbled paneer stir-fried with onions, tomatoes and green chilies. ~400 gms</div><div class="item-bottom"><div><div class="item-price">₹250</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="dal">
+<div class="cat-header"><div class="cat-icon">🫕</div><div class="cat-title">Dal Delights</div><span class="cat-badge">3 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="Dal Fry" data-price="170"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Dal Fry</div><div class="item-desc">Classic toor dal tempered with cumin, garlic and aromatic spices</div><div class="item-bottom"><div><div class="item-price">₹170</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Dal Tadka" data-price="190"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Dal Tadka</div><div class="item-desc">Lightly spiced dal with generous tadka of ghee, mustard and red chilli</div><div class="item-bottom"><div><div class="item-price">₹190</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Dal Makhni" data-price="200"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Popular</span></div><div class="item-name">Dal Makhni</div><div class="item-desc">Slow cooked black lentils simmered overnight in butter and fresh cream</div><div class="item-bottom"><div><div class="item-price">₹200</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="roti">
+<div class="cat-header"><div class="cat-icon">🫓</div><div class="cat-title">Rotis</div><span class="cat-badge">3 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="Tawa Roti" data-price="15"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Tawa Roti</div><div class="item-desc">Soft freshly made tawa roti — per piece</div><div class="item-bottom"><div><div class="item-price">₹15</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Butter Tawa Roti" data-price="20"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"></div><div class="item-name">Butter Tawa Roti</div><div class="item-desc">Soft roti with generous layer of fresh butter — per piece</div><div class="item-bottom"><div><div class="item-price">₹20</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Ghee Tawa Roti" data-price="20"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Ghee Tawa Roti</div><div class="item-desc">Soft roti finished with pure desi ghee — per piece</div><div class="item-bottom"><div><div class="item-price">₹20</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="rice">
+<div class="cat-header"><div class="cat-icon">🍚</div><div class="cat-title">Rice Specials</div><span class="cat-badge">6 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="Veg Biryani with Raita" data-price="210"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Popular</span><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Veg Biryani with Raita</div><div class="item-desc">Fragrant basmati rice layered with fresh vegetables and whole spices</div><div class="item-bottom"><div><div class="item-price">₹210</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Dal Khichdi" data-price="180"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Dal Khichdi</div><div class="item-desc">Comfort food — soft rice and lentils cooked with mild spices</div><div class="item-bottom"><div><div class="item-price">₹180</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Tawa Pulao with Raita" data-price="180"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Tawa Pulao with Raita</div><div class="item-desc">Spiced rice tossed on tawa with vegetables and masala</div><div class="item-bottom"><div><div class="item-price">₹180</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Curd Rice" data-price="160"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Curd Rice</div><div class="item-desc">Cooling South Indian style curd rice with tempered mustard seeds</div><div class="item-bottom"><div><div class="item-price">₹160</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Jeera Rice" data-price="150"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Jeera Rice</div><div class="item-desc">Fragrant basmati rice tempered with cumin seeds and ghee</div><div class="item-bottom"><div><div class="item-price">₹150</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Plain Rice" data-price="135"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Plain Rice</div><div class="item-desc">Simple steamed basmati rice — perfect with any curry</div><div class="item-bottom"><div><div class="item-price">₹135</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="chinese">
+<div class="cat-header"><div class="cat-icon">🥢</div><div class="cat-title">Chinese</div><span class="cat-badge">11 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="Triple Rice with Gravy" data-price="275"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Popular</span></div><div class="item-name">Triple Rice with Gravy</div><div class="item-desc">Three types of rice served with choice of gravy</div><div class="item-bottom"><div><div class="item-price">₹275</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Schezwan Manchurian" data-price="225"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-spicy">🌶 Spicy</span></div><div class="item-name">Schezwan Manchurian</div><div class="item-desc">Crispy veg balls in bold spicy Schezwan sauce</div><div class="item-bottom"><div><div class="item-price">₹225</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Paneer Chilli" data-price="300"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-spicy">🌶 Spicy</span><span class="tag tag-new">New</span></div><div class="item-name">Paneer Chilli</div><div class="item-desc">Crispy paneer tossed in spicy Indo-Chinese chilli sauce</div><div class="item-bottom"><div><div class="item-price">₹300</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Chinese Bhel" data-price="225"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Popular</span></div><div class="item-name">Chinese Bhel</div><div class="item-desc">Crispy noodles tossed with vegetables and Indo-Chinese sauces</div><div class="item-bottom"><div><div class="item-price">₹225</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Hakka Noodles" data-price="210"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"></div><div class="item-name">Hakka Noodles</div><div class="item-desc">Classic stir-fried noodles with vegetables in soy sauce</div><div class="item-bottom"><div><div class="item-price">₹210</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Schezwan Noodles" data-price="220"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-spicy">🌶 Spicy</span></div><div class="item-name">Schezwan Noodles</div><div class="item-desc">Spicy noodles tossed in bold Schezwan sauce with vegetables</div><div class="item-bottom"><div><div class="item-price">₹220</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Fried Rice" data-price="210"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"></div><div class="item-name">Fried Rice</div><div class="item-desc">Classic vegetable fried rice with soy sauce and spring onions</div><div class="item-bottom"><div><div class="item-price">₹210</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Schezwan Fried Rice" data-price="220"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-spicy">🌶 Spicy</span></div><div class="item-name">Schezwan Fried Rice</div><div class="item-desc">Fried rice tossed in spicy Schezwan sauce</div><div class="item-bottom"><div><div class="item-price">₹220</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Manchurian Rice" data-price="225"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"></div><div class="item-name">Manchurian Rice</div><div class="item-desc">Fried rice served with veg manchurian gravy</div><div class="item-bottom"><div><div class="item-price">₹225</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Manchurian Dry" data-price="210"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"></div><div class="item-name">Manchurian Dry / Gravy</div><div class="item-desc">Crispy veg balls in tangy manchurian sauce — dry or with gravy</div><div class="item-bottom"><div><div class="item-price">₹210</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Veg Crispy" data-price="240"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-new">New</span></div><div class="item-name">Veg Crispy</div><div class="item-desc">Crispy fried vegetables tossed in tangy Indo-Chinese sauce</div><div class="item-bottom"><div><div class="item-price">₹240</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="pavbhaji">
+<div class="cat-header"><div class="cat-icon">🧈</div><div class="cat-title">Pav Bhaji</div><span class="cat-badge">3 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="Pav Bhaji" data-price="180"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Classic</span></div><div class="item-name">Pav Bhaji</div><div class="item-desc">Mumbai-style spiced vegetable mash served with buttered pav</div><div class="item-bottom"><div><div class="item-price">₹180</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Cheese Pav Bhaji" data-price="210"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-new">New</span></div><div class="item-name">Cheese Pav Bhaji</div><div class="item-desc">Extra indulgent pav bhaji loaded with melted cheese on top</div><div class="item-bottom"><div><div class="item-price">₹210</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Butter Pav" data-price="15"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"></div><div class="item-name">Butter Pav</div><div class="item-desc">Soft pav toasted with generous butter — per piece</div><div class="item-bottom"><div><div class="item-price">₹15</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="sides">
+<div class="cat-header"><div class="cat-icon">🥗</div><div class="cat-title">Sides & Accompaniments</div><span class="cat-badge">6 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="White Dhokla" data-price="105"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">White Dhokla</div><div class="item-desc">Soft steamed Gujarati dhokla with tempering</div><div class="item-bottom"><div><div class="item-price">₹105</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Curd" data-price="30"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Curd</div><div class="item-desc">Fresh homestyle curd — 100ml</div><div class="item-bottom"><div><div class="item-price">₹30</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Veg Raita" data-price="45"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Veg Raita</div><div class="item-desc">Fresh vegetables in chilled spiced yogurt — 100ml</div><div class="item-bottom"><div><div class="item-price">₹45</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Boondi Raita" data-price="45"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Boondi Raita</div><div class="item-desc">Crispy boondi in chilled spiced yogurt — 100ml</div><div class="item-bottom"><div><div class="item-price">₹45</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Green Salad" data-price="75"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Green Salad</div><div class="item-desc">Fresh garden salad with seasonal vegetables</div><div class="item-bottom"><div><div class="item-price">₹75</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Roasted Papad" data-price="15"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Roasted Papad</div><div class="item-desc">Crispy roasted papad — per piece</div><div class="item-bottom"><div><div class="item-price">₹15</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="sandwich">
+<div class="cat-header"><div class="cat-icon">🥪</div><div class="cat-title">Sandwiches</div><span class="cat-badge">4 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="Bread Butter Sandwich" data-price="60"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Bread Butter Sandwich</div><div class="item-desc">Simple classic bread butter sandwich — light and fresh</div><div class="item-bottom"><div><div class="item-price">₹60</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Veg Sandwich" data-price="70"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Veg Sandwich</div><div class="item-desc">Fresh vegetables with chutneys in toasted bread</div><div class="item-bottom"><div><div class="item-price">₹70</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Veg Cheese Sandwich" data-price="100"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Popular</span></div><div class="item-name">Veg Cheese Sandwich</div><div class="item-desc">Fresh vegetables with melted cheese in toasted bread</div><div class="item-bottom"><div><div class="item-price">₹100</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Veg Cheese Grill Sandwich" data-price="200"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-new">New</span></div><div class="item-name">Veg Cheese Grill Sandwich</div><div class="item-desc">Grilled sandwich loaded with vegetables and cheese — crispy outside, gooey inside</div><div class="item-bottom"><div><div class="item-price">₹200</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="frankies">
+<div class="cat-header"><div class="cat-icon">🌯</div><div class="cat-title">Frankies</div><span class="cat-badge">1 item</span></div>
+<div class="items-grid">
+<div class="item" data-name="Veg Cheese Frankie" data-price="100"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Popular</span></div><div class="item-name">Veg Cheese Frankie</div><div class="item-desc">Soft roti wrap filled with spiced vegetables and melted cheese</div><div class="item-bottom"><div><div class="item-price">₹100</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="category" id="beverages">
+<div class="cat-header"><div class="cat-icon">🥤</div><div class="cat-title">Beverages</div><span class="cat-badge">2 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="Butter Milk Chhas" data-price="30"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-jain">Jain ✓</span></div><div class="item-name">Butter Milk (Chhas)</div><div class="item-desc">Refreshing salted buttermilk — 200ml</div><div class="item-bottom"><div><div class="item-price">₹30</div></div><button class="add-btn">Add +</button></div></div></div>
+<div class="item" data-name="Cold Coco" data-price="90"><div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=200&q=80" alt="" loading="lazy"></div><div class="item-content"><div class="item-tags"></div><div class="item-name">Cold Coco</div><div class="item-desc">Chilled chocolate drink — 200ml</div><div class="item-bottom"><div><div class="item-price">₹90</div></div><button class="add-btn">Add +</button></div></div></div>
+</div></div>
+
+<div class="empty" id="emptyState" style="display:none">
+  <div class="empty-icon">🔍</div>
+  <div style="font-size:18px;font-weight:600;margin-bottom:8px;">No dishes found</div>
+  <div>Try searching something else</div>
+</div>
+
+</div>
+
+<!-- CART BAR -->
+<div class="cart-bar" id="cartBar">
+  <div class="cart-left">
+    <div class="cart-pill" id="cartPill">0</div>
+    <div><div class="cart-label" id="cartLabel">0 items in cart</div><div class="cart-sub" id="cartSub">₹0 total</div></div>
+  </div>
+  <div class="cart-right">
+    <button class="btn-clear" id="btnClear">Clear</button>
+    <a class="btn-order" id="btnOrder" href="#">Order on WhatsApp 💬</a>
+  </div>
+</div>
+
+<!-- FAB -->
+<button class="fab" id="fabAdd" title="Add new item">+</button>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div class="modal-head">Add New Menu Item</div>
+    <div class="field"><label>Dish Name *</label><input type="text" id="fName" placeholder="e.g. Palak Paneer"></div>
+    <div class="field"><label>Description</label><input type="text" id="fDesc" placeholder="Short description of the dish"></div>
+    <div class="field-row">
+      <div class="field"><label>Price (₹) *</label><input type="number" id="fPrice" placeholder="200"></div>
+      <div class="field"><label>Category</label>
+        <select id="fCat">
+          <option>Combo Meals</option><option>Mini Combos</option><option>Chaat Items</option><option>Punjabi Veg Classic</option><option>Paneer Delights</option><option>Dal Delights</option><option>Rotis</option><option>Rice Specials</option><option>Chinese</option><option>Pav Bhaji</option><option>Sides</option><option>Sandwiches</option><option>Frankies</option><option>Beverages</option>
         </select>
       </div>
     </div>
-    <div class="form-group">
-      <label class="form-label">Tags</label>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;">
-        <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" id="tagJain"> Jain</label>
-        <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" id="tagSpicy"> Spicy</label>
-        <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" id="tagNew"> New</label>
-        <label style="display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;"><input type="checkbox" id="tagPop"> Popular</label>
+    <div class="field"><label>Tags</label>
+      <div class="check-row">
+        <label class="check-label"><input type="checkbox" id="cJain"> 🌿 Jain</label>
+        <label class="check-label"><input type="checkbox" id="cSpicy"> 🌶 Spicy</label>
+        <label class="check-label"><input type="checkbox" id="cNew"> ✨ New</label>
+        <label class="check-label"><input type="checkbox" id="cPop"> ⭐ Popular</label>
       </div>
     </div>
-    <div class="modal-btns">
-      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
-      <button class="btn-submit" onclick="submitItem()">Add to Menu ✓</button>
+    <div class="modal-actions">
+      <button class="btn-cancel" id="btnCancel">Cancel</button>
+      <button class="btn-save" id="btnSave">Add to Menu ✓</button>
     </div>
   </div>
 </div>
 
+<div class="toast" id="toast"></div>
+
 <script>
-// Cart system
-var cart = [];
+(function(){
+  var cart = [];
+  var phone = "9374512344";
 
-function orderItem(name, price) {
-  cart.push({name, price});
-  var total = cart.reduce(function(s,i){return s+i.price;},0);
-  var msg = cart.map(function(i){return i.name+' (Rs.'+i.price+')'}).join(', ');
-  var wa = 'https://wa.me/918200808880?text=' + encodeURIComponent('Hi! I want to order from Chamunda Tea:\n\n' + msg + '\n\nTotal: Rs.' + total + '\n\nName:\nAddress:\nPhone:');
-  document.getElementById('waOrderBtn').href = wa;
-  showToast(name + ' added! Total: Rs.' + total);
-}
-
-function showToast(msg) {
-  var t = document.createElement('div');
-  t.style.cssText = 'position:fixed;top:90px;right:20px;background:#1a1a1a;color:white;padding:12px 20px;border-radius:10px;font-size:14px;font-weight:600;z-index:9999;transition:opacity .3s;';
-  t.textContent = '✓ ' + msg;
-  document.body.appendChild(t);
-  setTimeout(function(){t.style.opacity='0';setTimeout(function(){t.remove();},300);},2000);
-}
-
-function filterItems() {
-  var q = document.getElementById('searchInput').value.toLowerCase();
-  document.querySelectorAll('.item-card').forEach(function(c){
-    c.style.display = c.innerText.toLowerCase().includes(q) ? '' : 'none';
+  // ADD TO CART - using event delegation (no inline onclick needed!)
+  document.getElementById('menuBody').addEventListener('click', function(e){
+    var btn = e.target.closest('.add-btn');
+    if(!btn) return;
+    var item = btn.closest('.item');
+    if(!item) return;
+    var name = item.dataset.name;
+    var price = parseInt(item.dataset.price);
+    cart.push({name: name, price: price});
+    btn.textContent = 'Added ✓';
+    btn.classList.add('added');
+    setTimeout(function(){ btn.textContent = 'Add +'; btn.classList.remove('added'); }, 1500);
+    updateCart();
+    toast('✓ ' + name + ' added to cart!');
   });
-}
 
-function openModal(){document.getElementById('addModal').classList.add('open');}
-function closeModal(){document.getElementById('addModal').classList.remove('open');}
+  function updateCart(){
+    var total = cart.reduce(function(s,i){ return s + i.price; }, 0);
+    document.getElementById('cartPill').textContent = cart.length;
+    document.getElementById('cartLabel').textContent = cart.length + ' item' + (cart.length !== 1 ? 's' : '') + ' in cart';
+    document.getElementById('cartSub').textContent = '₹' + total + ' total';
+    document.getElementById('cartBar').classList.toggle('show', cart.length > 0);
+    var msg = 'Hi! I want to order from Tipsy Topsy:\n\n' +
+      cart.map(function(i, idx){ return (idx+1) + '. ' + i.name + ' — ₹' + i.price; }).join('\n') +
+      '\n\nTotal: ₹' + total +
+      '\n\nMy Name:\nMy Address:\nMy Phone:';
+    document.getElementById('btnOrder').href = 'https://wa.me/91' + phone + '?text=' + encodeURIComponent(msg);
+  }
 
-function submitItem() {
-  var n = document.getElementById('newName').value.trim();
-  var d = document.getElementById('newDesc').value.trim();
-  var p = document.getElementById('newPrice').value.trim();
-  var cat = document.getElementById('newCategory').value;
-  if(!n || !p){showToast('Please enter dish name and price!');return;}
-  
-  var badges = '';
-  if(document.getElementById('tagJain').checked) badges += '<span class="badge badge-jain">Jain ✓</span>';
-  if(document.getElementById('tagSpicy').checked) badges += '<span class="badge badge-spicy">🌶 Spicy</span>';
-  if(document.getElementById('tagNew').checked) badges += '<span class="badge badge-new">New</span>';
-  if(document.getElementById('tagPop').checked) badges += '<span class="badge badge-popular">Popular</span>';
-  
-  var card = '<div class="item-card"><img class="item-img" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="'+n+'"><div class="item-info"><div class="item-badges">'+badges+'</div><div class="item-name">'+n+'</div><div class="item-desc">'+(d||'Freshly prepared with love.')+'</div><div class="item-footer"><div><div class="item-price">₹'+p+'</div></div><button class="order-btn" onclick="orderItem(''+n+'','+p+')">Add +</button></div></div></div>';
-  
-  var grids = document.querySelectorAll('.items-grid');
-  grids[grids.length-1].insertAdjacentHTML('beforeend', card);
-  closeModal();
-  showToast(n + ' added to menu!');
-  
-  document.getElementById('newName').value='';
-  document.getElementById('newDesc').value='';
-  document.getElementById('newPrice').value='';
-  document.getElementById('tagJain').checked=false;
-  document.getElementById('tagSpicy').checked=false;
-  document.getElementById('tagNew').checked=false;
-  document.getElementById('tagPop').checked=false;
-}
+  document.getElementById('btnClear').addEventListener('click', function(){
+    cart = [];
+    updateCart();
+    toast('Cart cleared');
+  });
+
+  // SEARCH
+  document.getElementById('searchInput').addEventListener('input', function(){
+    var q = this.value.toLowerCase().trim();
+    var anyVisible = false;
+    document.querySelectorAll('.category').forEach(function(cat){
+      var items = cat.querySelectorAll('.item');
+      var catVisible = false;
+      items.forEach(function(item){
+        var match = !q || item.dataset.name.toLowerCase().includes(q) || item.querySelector('.item-desc').textContent.toLowerCase().includes(q);
+        item.style.display = match ? '' : 'none';
+        if(match) catVisible = true;
+      });
+      cat.style.display = catVisible ? '' : 'none';
+      if(catVisible) anyVisible = true;
+    });
+    document.getElementById('emptyState').style.display = anyVisible ? 'none' : 'block';
+  });
+
+  // TABS
+  document.getElementById('tabsWrap').addEventListener('click', function(e){
+    var tab = e.target.closest('.tab');
+    if(!tab) return;
+    document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
+    tab.classList.add('active');
+    var target = document.getElementById(tab.dataset.target);
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+
+  // FAB + MODAL
+  document.getElementById('fabAdd').addEventListener('click', function(){ document.getElementById('overlay').classList.add('open'); });
+  document.getElementById('btnCancel').addEventListener('click', function(){ document.getElementById('overlay').classList.remove('open'); });
+  document.getElementById('overlay').addEventListener('click', function(e){ if(e.target === this) this.classList.remove('open'); });
+
+  document.getElementById('btnSave').addEventListener('click', function(){
+    var n = document.getElementById('fName').value.trim();
+    var d = document.getElementById('fDesc').value.trim();
+    var p = parseInt(document.getElementById('fPrice').value);
+    if(!n || !p){ toast('Please enter dish name and price!'); return; }
+    var badges = '';
+    if(document.getElementById('cJain').checked) badges += '<span class="tag tag-jain">Jain ✓</span>';
+    if(document.getElementById('cSpicy').checked) badges += '<span class="tag tag-spicy">🌶 Spicy</span>';
+    if(document.getElementById('cNew').checked) badges += '<span class="tag tag-new">New</span>';
+    if(document.getElementById('cPop').checked) badges += '<span class="tag tag-pop">Popular</span>';
+    var html = '<div class="item" data-name="' + n + '" data-price="' + p + '">' +
+      '<div class="item-img-wrap"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&q=80" alt="" loading="lazy"></div>' +
+      '<div class="item-content"><div class="item-tags">' + badges + '</div>' +
+      '<div class="item-name">' + n + '</div>' +
+      '<div class="item-desc">' + (d || 'Freshly prepared with love.') + '</div>' +
+      '<div class="item-bottom"><div><div class="item-price">₹' + p + '</div></div><button class="add-btn">Add +</button></div>' +
+      '</div></div>';
+    var grids = document.querySelectorAll('.items-grid');
+    grids[grids.length - 1].insertAdjacentHTML('beforeend', html);
+    document.getElementById('overlay').classList.remove('open');
+    document.getElementById('fName').value = '';
+    document.getElementById('fDesc').value = '';
+    document.getElementById('fPrice').value = '';
+    document.getElementById('cJain').checked = false;
+    document.getElementById('cSpicy').checked = false;
+    document.getElementById('cNew').checked = false;
+    document.getElementById('cPop').checked = false;
+    toast('✓ ' + n + ' added to menu!');
+  });
+
+  function toast(msg){
+    var t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(function(){ t.classList.remove('show'); }, 2500);
+  }
+})();
 </script>
-
 </body>
 </html>
